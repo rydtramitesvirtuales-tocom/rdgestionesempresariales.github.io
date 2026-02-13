@@ -154,7 +154,7 @@ header {
   box-shadow: 0 15px 30px rgba(212,175,55,0.25);
 }
 
-/* ANIMACIONES SCROLL */
+/* ANIMACIONES */
 .hidden {
   opacity: 0;
   transform: translateY(40px);
@@ -195,6 +195,48 @@ header {
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
+/* MODAL SEDE */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #d4af37;
+}
+
+.modal-contenido button {
+  margin: 10px;
+  padding: 12px 20px;
+  border: none;
+  background-color: #d4af37;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.modal-contenido button:hover {
+  background-color: white;
+}
+
+.cerrar {
+  background-color: gray !important;
+  color: white !important;
+}
+
 footer {
   text-align: center;
   padding: 30px;
@@ -222,37 +264,28 @@ footer {
 <img src="logo-rd.png" alt="Logo RD Gestiones" class="logo">
 <h1>RD Gestiones Empresariales</h1>
 <p>Soluciones rápidas, seguras y profesionales en trámites tributarios, legales y administrativos en Medellín.</p>
-<a href="https://wa.me/573017222991" target="_blank" class="btn">Contáctanos por WhatsApp</a>
+<button onclick="abrirSelector()" class="btn">Contáctanos por WhatsApp</button>
 </header>
 
 <section id="quienes">
 <h2>¿Quiénes Somos?</h2>
-<p>Somos un establecimiento especializado en trámites administrativos, tributarios y jurídicos en Medellín. Contamos con respaldo de Contador Público y Abogado titulado, garantizando procesos seguros, claros y confiables.</p>
+<p>Somos un establecimiento especializado en trámites administrativos, tributarios y jurídicos en Medellín, con respaldo profesional contable y jurídico.</p>
 </section>
 
 <section id="servicios">
 <h2>Nuestros Servicios</h2>
 <div class="services">
-<div class="card"><h3>Trámites DIAN</h3><p>RUT, Declaración de Renta, IVA, Facturación Electrónica y Devoluciones.</p></div>
-<div class="card"><h3>Trámites Alcaldías</h3><p>Predial, Industria y Comercio, Uso de Suelos y SISBEN.</p></div>
+<div class="card"><h3>Trámites DIAN</h3><p>RUT, Declaración de Renta, IVA y Facturación Electrónica.</p></div>
+<div class="card"><h3>Trámites Alcaldías</h3><p>Predial, Industria y Comercio y Uso de Suelos.</p></div>
 <div class="card"><h3>Apostillas</h3><p>Legalización de documentos para estudios y trabajo en el exterior.</p></div>
-<div class="card"><h3>Trámites Vehiculares</h3><p>Traspasos e Impuesto Vehicular en Medellín y área metropolitana.</p></div>
+<div class="card"><h3>Trámites Vehiculares</h3><p>Traspasos e Impuesto Vehicular.</p></div>
 </div>
 </section>
 
 <section>
-<h2>Lo que dicen nuestros clientes</h2>
-<div class="services">
-<div class="card"><p>"Excelente atención y rapidez."</p><strong>- María G.</strong></div>
-<div class="card"><p>"Proceso claro y sin complicaciones."</p><strong>- Carlos R.</strong></div>
-<div class="card"><p>"Muy profesionales y confiables."</p><strong>- Laura P.</strong></div>
-</div>
-</section>
-
-<section>
-<h2>Preguntas Frecuentes</h2>
-<div class="card"><h3>¿Cuánto tarda una declaración de renta?</h3><p>Entre 1 y 3 días según el caso.</p></div>
-<div class="card"><h3>¿Atienden virtual?</h3><p>Sí, atendemos presencial en Medellín y virtual a nivel nacional.</p></div>
+<h2>Opiniones de Nuestros Clientes</h2>
+<p>Tu experiencia es muy importante para nosotros.</p>
+<a href="#" class="btn">Dejar una reseña en Google</a>
 </section>
 
 <section id="contacto">
@@ -260,16 +293,11 @@ footer {
 <div class="contacto-grid">
 <div class="sede">
 <h3>Sede Alpujarra</h3>
-<p>Cra 52 #42-60 Local 108 – CC Metrocentro 1</p>
 <p>301 722 2991</p>
-<p>rydtramitesvirtuales@gmail.com</p>
 </div>
-
 <div class="sede">
 <h3>Sede Centro Caracas</h3>
-<p>Calle 54 #45-06 Local 104</p>
 <p>300 901 2017</p>
-<p>rdgestiones02@gmail.com</p>
 </div>
 </div>
 </section>
@@ -278,31 +306,68 @@ footer {
 © 2026 RD Gestiones Empresariales – Seguridad y Calidad a su Servicio
 </footer>
 
-<a href="https://wa.me/573017222991" target="_blank" class="whatsapp-float">💬</a>
+<a href="#" class="whatsapp-float" onclick="abrirSelector()">💬</a>
 <button onclick="topFunction()" id="topBtn">↑</button>
 
+<!-- MODAL -->
+<div id="selectorSede" class="modal">
+<div class="modal-contenido">
+<h3>¿Con cuál sede deseas comunicarte?</h3>
+<button onclick="irWhatsApp('alpujarra')">Sede Alpujarra</button>
+<button onclick="irWhatsApp('caracas')">Sede Centro Caracas</button>
+<br><br>
+<button onclick="cerrarSelector()" class="cerrar">Cancelar</button>
+</div>
+</div>
+
 <script>
+
+/* Animaciones */
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('show');
+}
+});
 });
 document.querySelectorAll('.card, .sede, section h2').forEach(el => {
-  el.classList.add('hidden');
-  observer.observe(el);
+el.classList.add('hidden');
+observer.observe(el);
 });
 
+/* Botón arriba */
 let mybutton = document.getElementById("topBtn");
 window.onscroll = function() {
-  mybutton.style.display =
-    document.documentElement.scrollTop > 300 ? "block" : "none";
+mybutton.style.display =
+document.documentElement.scrollTop > 300 ? "block" : "none";
 };
-
 function topFunction() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+window.scrollTo({top: 0, behavior: 'smooth'});
 }
+
+/* WhatsApp Selector */
+function abrirSelector() {
+document.getElementById("selectorSede").style.display = "flex";
+}
+function cerrarSelector() {
+document.getElementById("selectorSede").style.display = "none";
+}
+function irWhatsApp(sede) {
+let numero = "";
+let mensaje = "";
+
+if (sede === "alpujarra") {
+numero = "573017222991";
+mensaje = "Hola, deseo información sobre trámites en la sede Alpujarra.";
+} else if (sede === "caracas") {
+numero = "573009012017";
+mensaje = "Hola, deseo información sobre trámites en la sede Centro Caracas.";
+}
+
+let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+window.open(url, "_blank");
+}
+
 </script>
 
 </body>
