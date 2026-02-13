@@ -15,13 +15,12 @@
   }
   </style>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RD Gestiones Empresariales | Trámites en Medellín</title>
+  ...
 </head>
-
-
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<title>RD Gestiones Empresariales | Trámites en Medellín</title>
 
 <meta name="description" content="Especialistas en trámites DIAN, declaración de renta, RUT, IVA, alcaldías, apostillas y trámites vehiculares en Medellín. Atención profesional segura y confiable." />
 <meta name="keywords" content="trámites Medellín, DIAN Medellín, declaración de renta Medellín, RUT Medellín, apostillas Medellín, traspasos Medellín" />
@@ -398,28 +397,16 @@
 </section>
 
 <section id="agendar">
-  <h2>Agendar Cita</h2>
-  <div class="form-container">
-    <form action="mailto:rdgestiones02@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Nombre" placeholder="Nombre completo" required />
-      <input type="email" name="Correo" placeholder="Correo electrónico" required />
-      <input type="tel" name="Telefono" placeholder="Teléfono" required />
+  ...
+</section>
 
-      <select name="Sede" required>
-        <option value="">Seleccione sede</option>
-        <option value="Alpujarra">Sede Alpujarra</option>
-        <option value="Centro Caracas">Sede Centro Caracas</option>
-      </select>
+<section id="testimonios">
+  ...
+</section>
 
-      <input type="text" name="Servicio" placeholder="Servicio requerido" required />
-      <input type="date" name="Fecha" required />
-      <textarea name="Mensaje" placeholder="Mensaje adicional"></textarea>
-
-      <button type="submit" class="btn">Solicitar Cita</button>
-    </form>
-  </div>
-
-  <section>
+<section id="faq">
+  ...
+</section>
     <h2>Lo que dicen nuestros clientes</h2>
     <div class="services">
       <div class="card"><p>"Excelente atención y rapidez."</p><strong>- María G.</strong></div>
@@ -439,7 +426,7 @@
 
   <div class="sede-card">
     <h3>Sede Alpujarra</h3>
-   <img src="/rdgestionesempresariales.github.io/imagen/daniel.jpg" class="foto-sede">
+  <img src="/rdgestionesempresariales.github.io/imagen/daniel.jpg" class="foto-sede">
     <p>Cra 52 #42-60 Local 108 – CC Metrocentro 1</p>
     <p>301 722 2991</p>
     <p>rydtramitesvirtuales@gmail.com</p>
@@ -447,7 +434,7 @@
 
   <div class="sede-card">
     <h3>Sede Centro Caracas</h3>
-  <img src="/rdgestionesempresariales.github.io/imagen/richard.jpg" class="foto-sede">
+  <img src="imagen/daniel.jpg" class="foto-sede" alt="Sede Alpujarra">
     <p>Calle 54 #45-06 Local 104</p>
     <p>300 901 2017</p>
     <p>rdgestiones02@gmail.com</p>
@@ -510,12 +497,12 @@
   }
 
   // Cerrar modal si se clickea fuera del contenido
-  window.onclick = function(event) {
-    const modal = document.getElementById('selectorSede');
-    if (event.target === modal) {
-      cerrarModal();
-    }
-  };
+ window.onclick = function(event) {
+  const modal = document.getElementById('selectorSede');
+  if (event.target === modal) {
+    cerrarModal();
+  }
+};
 </script>
 
 </body>
