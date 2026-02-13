@@ -362,6 +362,29 @@
     max-width: 80%;
   }
 }
+  .asesor {
+  position: relative; /* necesario para la info-hover */
+  overflow: hidden;
+}
+
+.info-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  color: #d4af37;
+  padding: 15px;
+  font-size: 0.9rem;
+  transform: translateY(100%); /* empieza oculta */
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.asesor:hover .info-hover {
+  transform: translateY(0); /* aparece al pasar el mouse */
+}
+
 </style>
 </head>
 
@@ -404,15 +427,22 @@
       <img src="img/richard.jpg" alt="Richard">
       <h3>Richard</h3>
       <p>Sede Centro Caracas</p>
+      <div class="info-hover">
+        <p>Contador Público con 5 años de experiencia en trámites tributarios.</p>
+      </div>
     </div>
 
     <div class="asesor">
       <img src="img/daniel.jpg" alt="Daniel">
       <h3>Daniel</h3>
       <p>Sede Alpujarra</p>
+      <div class="info-hover">
+        <p>Abogado especializado en registros legales y trámites administrativos.</p>
+      </div>
     </div>
   </div>
 </section>
+
 
 <section id="servicios">
   <h2>Servicios Empresariales Integrales</h2>
