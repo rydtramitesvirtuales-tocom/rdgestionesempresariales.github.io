@@ -3,29 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RD Gestiones Empresariales</title>
+
+<title>RD Gestiones Empresariales | Trámites en Medellín</title>
+
+<meta name="description" content="RD Gestiones Empresariales en Medellín. Trámites DIAN, declaración de renta, RUT, IVA, alcaldías, apostillas y trámites vehiculares. Atención profesional segura y confiable.">
+<meta name="keywords" content="trámites Medellín, DIAN Medellín, declaración de renta Medellín, RUT Medellín, apostillas Medellín, traspasos Medellín">
+<meta name="author" content="RD Gestiones Empresariales">
 
 <style>
+
+/* -------------------- ESTILOS GENERALES -------------------- */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #0f0f0f;
   color: white;
+  scroll-behavior: smooth;
 }
+
+h1, h2, h3 {
+  color: #d4af37;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #d4af37;
+  color: black;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: white;
+}
+
+/* -------------------- NAVBAR -------------------- */
+
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.95);
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.brand {
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.links a {
+  color: #d4af37;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: white;
+}
+
+/* -------------------- HEADER -------------------- */
 
 header {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('logo-rd.png') center/contain no-repeat,
-              radial-gradient(circle, #1a1a1a 0%, #000 80%);
   text-align: center;
+  background: radial-gradient(circle, #1a1a1a 0%, #000 80%);
+  padding-top: 60px;
 }
 
-/* Efecto dinámico de brillo */
+.logo {
+  width: 420px;
+  max-width: 90%;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.6));
+  transition: transform 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
 header::before {
   content: "";
   position: absolute;
@@ -39,68 +124,41 @@ header::before {
 }
 
 @keyframes glow {
-  from {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  to {
-    transform: translate(-50%, -50%) scale(1.2);
-  }
+  from { transform: translate(-50%, -50%) scale(1); }
+  to { transform: translate(-50%, -50%) scale(1.2); }
 }
 
-/* Estilo para el logo */
-.logo {
-  width: 420px;
-  max-width: 95%;
-  margin-bottom: 30px;
-  filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.6));
-  transition: transform 0.5s ease;
-  position: relative;
-  z-index: 1;
-}
-
-.logo:hover {
-  transform: scale(1.05);
-}
-
-h1 {
-  color: #d4af37;
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-h2 {
-  color: #d4af37;
-}
-
-section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #d4af37;
-  color: black;
-  padding: 15px 25px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 20px;
-  border-radius: 5px;
-}
+/* -------------------- TARJETAS -------------------- */
 
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
 .card {
   background-color: #1a1a1a;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 25px;
+  border-radius: 10px;
   border: 1px solid #d4af37;
+  transition: all 0.3s ease;
 }
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(212,175,55,0.3);
+}
+
+/* -------------------- CTA -------------------- */
+
+.cta {
+  text-align: center;
+  background: #111;
+  border-top: 1px solid #d4af37;
+  border-bottom: 1px solid #d4af37;
+}
+
+/* -------------------- FOOTER -------------------- */
 
 footer {
   text-align: center;
@@ -108,20 +166,50 @@ footer {
   background-color: black;
   font-size: 14px;
 }
-</style>
 
+/* -------------------- WHATSAPP FLOAT -------------------- */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 26px;
+  padding: 15px 18px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-container">
+    <div class="brand">RD Gestiones</div>
+    <div class="links">
+      <a href="#quienes">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
 <header>
-  <img src="logo-rd.png" alt="Logo RD Gestiones" class="logo">
+  <img src="logo-rd.png" alt="Logo RD Gestiones Empresariales" class="logo">
   <h1>RD Gestiones Empresariales</h1>
   <p>Centro Integral de Trámites Administrativos, Tributarios y Jurídicos en Medellín</p>
-  <a href="https://wa.me/573017222991" class="btn">Contáctanos por WhatsApp</a>
+  <a href="https://wa.me/573017222991" target="_blank" class="btn">Contáctanos por WhatsApp</a>
 </header>
 
-<section>
+<!-- QUIÉNES SOMOS -->
+<section id="quienes">
 <h2>¿Quiénes Somos?</h2>
 <p>
 Somos un establecimiento de comercio en Medellín especializado en trámites administrativos,
@@ -130,7 +218,27 @@ garantizando procesos seguros, claros y confiables.
 </p>
 </section>
 
+<!-- POR QUÉ ELEGIRNOS -->
 <section>
+<h2>¿Por qué elegirnos?</h2>
+<div class="services">
+  <div class="card">
+    <h3>✔ Atención Personalizada</h3>
+    <p>Asesoría directa con profesional contable y jurídico.</p>
+  </div>
+  <div class="card">
+    <h3>✔ Procesos Seguros</h3>
+    <p>Manejo responsable y confidencial de su información.</p>
+  </div>
+  <div class="card">
+    <h3>✔ Experiencia y Respaldo</h3>
+    <p>Trámites claros, rápidos y sin complicaciones.</p>
+  </div>
+</div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
 <h2>Nuestros Servicios</h2>
 <div class="services">
 
@@ -157,7 +265,15 @@ garantizando procesos seguros, claros y confiables.
 </div>
 </section>
 
-<section>
+<!-- CTA -->
+<section class="cta">
+<h2>¿Necesitas ayuda con tus trámites?</h2>
+<p>Evita errores, sanciones y retrasos. Nosotros lo hacemos por ti.</p>
+<a href="https://wa.me/573017222991" target="_blank" class="btn">Hablar con un Asesor Ahora</a>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
 <h2>Contacto</h2>
 <p>
 Sede Alpujarra: Cra 52 #42-60 Local 108 – CC Metrocentro 1<br>
@@ -170,6 +286,9 @@ Correo: rydtramitesvirtuales@gmail.com
 <footer>
 © 2026 RD Gestiones Empresariales – Seguridad y Calidad a su Servicio
 </footer>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/573017222991" target="_blank" class="whatsapp-float">💬</a>
 
 </body>
 </html>
