@@ -15,8 +15,17 @@
 <meta property="og:image" content="logo-rd.png" />
 <meta property="og:type" content="website" />
 
+<!-- SEO local Medellín -->
+<meta name="geo.region" content="CO-ANT" />
+<meta name="geo.placename" content="Medellín" />
+<meta name="geo.position" content="6.2442;-75.5812" />
+<meta name="ICBM" content="6.2442, -75.5812" />
+
 <link rel="icon" href="logo-rd.png" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+<!-- Font Awesome para íconos modernos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
   /* -------- FONDO ANIMADO -------- */
@@ -28,6 +37,8 @@
     background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #000000, #111);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
+    font-weight: 400;
+    letter-spacing: 0.2px;
   }
 
   @keyframes gradientBG {
@@ -85,6 +96,7 @@
     align-items: center;
     text-align: center;
     padding-top: 60px;
+    background: linear-gradient(135deg, rgba(13, 27, 44, 0.9), rgba(0,0,0,0.7));
   }
 
   .logo {
@@ -96,6 +108,14 @@
   }
 
   .logo:hover { transform: scale(1.05); }
+
+  header p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f5f5f5;
+    max-width: 720px;
+    margin: auto;
+  }
 
   .btn {
     display: inline-block;
@@ -131,6 +151,12 @@
   .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(212,175,55,0.3);
+  }
+
+  .card h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
   /* FORMULARIO */
@@ -193,27 +219,27 @@
 
   /* WHATSAPP FLOTANTE */
   .whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #d4af37; /* color dorado */
-  border-radius: 50%;
-  padding: 14px;
-  box-shadow: 0 10px 25px rgba(212,175,55,0.6);
-  cursor: pointer;
-  z-index: 1500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  width: 56px;
-  height: 56px;
-}
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #d4af37;
+    border-radius: 50%;
+    padding: 14px;
+    box-shadow: 0 10px 25px rgba(212,175,55,0.6);
+    cursor: pointer;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 56px;
+    height: 56px;
+  }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  background-color: #b9962e; /* un dorado más oscuro al pasar mouse */
-}
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #b9962e;
+  }
 
   .whatsapp-float img {
     display: block;
@@ -299,9 +325,14 @@
 <header>
   <img src="logo-rd.png" alt="Logo RD Gestiones" class="logo" />
   <h1>RD Gestiones Empresariales</h1>
-  <p>Soluciones rápidas y seguras en trámites tributarios y administrativos en Medellín.</p>
-  <button onclick="abrirSelector()" class="btn">Contáctanos por WhatsApp</button>
-  <p>Soluciones rápidas, seguras y profesionales en trámites tributarios, legales y administrativos en Medellín.</p>
+  <p>Soluciones profesionales en trámites tributarios, legales y administrativos en Medellín. Acompañamiento completo desde la formalización hasta el cumplimiento empresarial.</p>
+
+  <div style="margin-top: 25px;">
+    <a href="javascript:void(0)" onclick="abrirSelector()" class="btn">Asesoría inmediata</a>
+    <a href="#servicios" class="btn" style="background: white; color:black; margin-left: 12px;">Ver servicios</a>
+  </div>
+
+  <p style="margin-top: 20px;">Soluciones rápidas, seguras y profesionales en trámites tributarios, legales y administrativos en Medellín.</p>
   <a href="https://wa.me/573017222991" target="_blank" class="btn">Contáctanos por WhatsApp</a>
 </header>
 
@@ -311,16 +342,51 @@
 </section>
 
 <section id="servicios">
-  <h2>Nuestros Servicios</h2>
+  <h2>Servicios Empresariales Integrales</h2>
+
+  <h3 style="text-align:center; margin-top:40px;">🚀 Para Emprendedores</h3>
   <div class="services">
-    <div class="card"><h3>Trámites DIAN</h3><p>RUT, Declaración de Renta, IVA.</p></div>
-    <div class="card"><h3>Trámites Alcaldías</h3><p>Predial, Industria y Comercio.</p></div>
-    <div class="card"><h3>Apostillas</h3><p>Legalización de documentos.</p></div>
-    <div class="card"><h3>Trámites Vehiculares</h3><p>Traspasos e impuestos.</p></div>
-    <div class="card"><h3>Trámites DIAN</h3><p>RUT, Declaración de Renta, IVA, Facturación Electrónica y Devoluciones.</p></div>
-    <div class="card"><h3>Trámites Alcaldías</h3><p>Predial, Industria y Comercio, Uso de Suelos y SISBEN.</p></div>
-    <div class="card"><h3>Apostillas</h3><p>Legalización de documentos para estudios y trabajo en el exterior.</p></div>
-    <div class="card"><h3>Trámites Vehiculares</h3><p>Traspasos e Impuesto Vehicular en Medellín y área metropolitana.</p></div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-building-circle-check"></i> Constitución de Empresa</h3>
+      <p>Registro en Cámara de Comercio, matrícula mercantil, estatutos y formalización legal completa.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-file-lines"></i> Trámites DIAN</h3>
+      <p>Inscripción y actualización del RUT, firma electrónica, facturación electrónica y resolución de facturación.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-city"></i> Registro Municipal</h3>
+      <p>Industria y Comercio (ICA), uso de suelo y permisos ante Alcaldía.</p>
+    </div>
+
+  </div>
+
+  <h3 style="text-align:center; margin-top:60px;">🏬 Para Empresas Activas</h3>
+  <div class="services">
+
+    <div class="card">
+      <h3><i class="fa-solid fa-chart-line"></i> Declaraciones Tributarias</h3>
+      <p>Declaración de renta, IVA, correcciones tributarias y devoluciones ante DIAN.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-certificate"></i> Cámara de Comercio</h3>
+      <p>Renovación mercantil, certificados, RUP y cancelación de matrícula.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-shield-halved"></i> Trámites Especiales</h3>
+      <p>Registro de marca, apostillas, trámites vehiculares y procesos ante superintendencias.</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:50px;">
+    <p style="font-size:18px;">¿Necesitas asesoría personalizada?</p>
+    <button onclick="abrirSelector()" class="btn">Hablar con un asesor ahora</button>
   </div>
 </section>
 
@@ -381,10 +447,17 @@
       <p>rdgestiones02@gmail.com</p>
     </div>
   </div>
+
+  <div style="text-align:center; margin-top: 25px; color:#d4af37;">
+    <strong>Atención en Medellín y área metropolitana</strong><br/>
+    <span>Servicios presenciales y virtuales en toda Colombia</span>
+  </div>
 </section>
 
 <footer>
-  © 2026 RD Gestiones Empresariales – Seguridad y Calidad a su Servicio
+  © 2026 RD Gestiones Empresariales. Todos los derechos reservados.
+  <br/>
+  Atención profesional en Medellín – Trámites tributarios, legales y administrativos.
 </footer>
 
 <!-- Botón WhatsApp flotante -->
