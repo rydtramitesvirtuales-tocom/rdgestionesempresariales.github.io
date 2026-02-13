@@ -1,26 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>RD Gestiones Empresariales</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style>
-  .foto-sede {
-    width: 180px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 20px;
-    display: block;
-    margin: 15px auto;
-  }
-  </style>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RD Gestiones Empresariales | Trámites en Medellín</title>
-  ...
-</head>
+<title>RD Gestiones Empresariales | Trámites en Medellín</title>
 
 <meta name="description" content="Especialistas en trámites DIAN, declaración de renta, RUT, IVA, alcaldías, apostillas y trámites vehiculares en Medellín. Atención profesional segura y confiable." />
 <meta name="keywords" content="trámites Medellín, DIAN Medellín, declaración de renta Medellín, RUT Medellín, apostillas Medellín, traspasos Medellín" />
@@ -265,21 +249,31 @@
   }
 
   /* MODAL */
-.modal {
-  display: none; 
-  position: fixed; 
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  justify-content: center;
-  align-items: center;
-}
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+  }
 
-.modal-contenido {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
+  .modal-contenido {
+    background-color: #1a1a1a;
+    padding: 30px 40px;
+    border-radius: 12px;
+    border: 1px solid #d4af37;
+    text-align: center;
+    color: #d4af37;
+    max-width: 320px;
+    width: 90%;
+    box-shadow: 0 0 40px rgba(212,175,55,0.4);
+  }
 
   .modal-contenido h3 {
     margin-bottom: 25px;
@@ -397,16 +391,28 @@
 </section>
 
 <section id="agendar">
-  ...
-</section>
+  <h2>Agendar Cita</h2>
+  <div class="form-container">
+    <form action="mailto:rdgestiones02@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Nombre" placeholder="Nombre completo" required />
+      <input type="email" name="Correo" placeholder="Correo electrónico" required />
+      <input type="tel" name="Telefono" placeholder="Teléfono" required />
 
-<section id="testimonios">
-  ...
-</section>
+      <select name="Sede" required>
+        <option value="">Seleccione sede</option>
+        <option value="Alpujarra">Sede Alpujarra</option>
+        <option value="Centro Caracas">Sede Centro Caracas</option>
+      </select>
 
-<section id="faq">
-  ...
-</section>
+      <input type="text" name="Servicio" placeholder="Servicio requerido" required />
+      <input type="date" name="Fecha" required />
+      <textarea name="Mensaje" placeholder="Mensaje adicional"></textarea>
+
+      <button type="submit" class="btn">Solicitar Cita</button>
+    </form>
+  </div>
+
+  <section>
     <h2>Lo que dicen nuestros clientes</h2>
     <div class="services">
       <div class="card"><p>"Excelente atención y rapidez."</p><strong>- María G.</strong></div>
@@ -423,23 +429,29 @@
 </section>
 
 <section id="contacto">
+  <h2>Contacto</h2>
+  <p><strong>Sede Alpujarra:</strong> 301 722 2991</p>
+  <p><strong>Sede Centro Caracas:</strong> 300 901 2017</p>
+  <div class="contacto-grid">
+    <div class="sede">
+      <h3>Sede Alpujarra</h3>
+      <p>Cra 52 #42-60 Local 108 – CC Metrocentro 1</p>
+      <p>301 722 2991</p>
+      <p>rydtramitesvirtuales@gmail.com</p>
+    </div>
 
-  <div class="sede-card">
-    <h3>Sede Alpujarra</h3>
-  <img src="/rdgestionesempresariales.github.io/imagen/daniel.jpg" class="foto-sede">
-    <p>Cra 52 #42-60 Local 108 – CC Metrocentro 1</p>
-    <p>301 722 2991</p>
-    <p>rydtramitesvirtuales@gmail.com</p>
+    <div class="sede">
+      <h3>Sede Centro Caracas</h3>
+      <p>Calle 54 #45-06 Local 104</p>
+      <p>300 901 2017</p>
+      <p>rdgestiones02@gmail.com</p>
+    </div>
   </div>
 
-  <div class="sede-card">
-    <h3>Sede Centro Caracas</h3>
-  <img src="imagen/daniel.jpg" class="foto-sede" alt="Sede Alpujarra">
-    <p>Calle 54 #45-06 Local 104</p>
-    <p>300 901 2017</p>
-    <p>rdgestiones02@gmail.com</p>
+  <div style="text-align:center; margin-top: 25px; color:#d4af37;">
+    <strong>Atención en Medellín y área metropolitana</strong><br/>
+    <span>Servicios presenciales y virtuales en toda Colombia</span>
   </div>
-
 </section>
 
 <footer>
@@ -497,13 +509,14 @@
   }
 
   // Cerrar modal si se clickea fuera del contenido
- window.onclick = function(event) {
-  const modal = document.getElementById('selectorSede');
-  if (event.target === modal) {
-    cerrarModal();
-  }
-};
+  window.onclick = function(event) {
+    const modal = document.getElementById('selectorSede');
+    if (event.target === modal) {
+      cerrarModal();
+    }
+  };
 </script>
 
 </body>
 </html>
+
