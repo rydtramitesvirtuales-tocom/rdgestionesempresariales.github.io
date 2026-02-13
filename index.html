@@ -11,7 +11,43 @@
 <meta name="author" content="RD Gestiones Empresariales">
 
 <style>
+/* -------- CONTACTO MEJORADO -------- */
 
+#contacto {
+  text-align: center;
+}
+
+.titulo-contacto {
+  margin-bottom: 50px;
+  color: #d4af37;
+}
+
+.contacto-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.sede {
+  background-color: #1a1a1a;
+  padding: 35px;
+  border-radius: 12px;
+  border: 1px solid #d4af37;
+  width: 420px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.sede:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(212,175,55,0.25);
+}
+
+.sede h3 {
+  color: #d4af37;
+  margin-top: 0;
+}
 /* -------------------- ESTILOS GENERALES -------------------- */
 
 body {
@@ -266,21 +302,14 @@ garantizando procesos seguros, claros y confiables.
 </section>
 
 <!-- CTA -->
-<section class="cta">
-<h2>¿Necesitas ayuda con tus trámites?</h2>
-<p>Evita errores, sanciones y retrasos. Nosotros lo hacemos por ti.</p>
-<a href="https://wa.me/573017222991" target="_blank" class="btn">Hablar con un Asesor Ahora</a>
-</section>
-
-<!-- CONTACTO -->
-<!-- CONTACTO -->
 <section id="contacto">
-  <h2 style="text-align:center;">Contacto</h2>
+  <h2 class="titulo-contacto">Contacto</h2>
 
-  <div class="contacto-container">
+  <div class="contacto-grid">
 
     <div class="sede">
       <h3>Sede Alpujarra</h3>
+
       <p><strong>Dirección:</strong><br>
       Cra 52 #42-60 Local 108 – CC Metrocentro 1</p>
 
@@ -293,6 +322,7 @@ garantizando procesos seguros, claros y confiables.
 
     <div class="sede">
       <h3>Sede Centro Caracas</h3>
+
       <p><strong>Dirección:</strong><br>
       Calle 54 #45-06 Local 104</p>
 
@@ -305,6 +335,7 @@ garantizando procesos seguros, claros y confiables.
 
   </div>
 </section>
+
 
 
 <footer>
