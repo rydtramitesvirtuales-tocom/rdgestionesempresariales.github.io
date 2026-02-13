@@ -6,61 +6,38 @@
 
 <title>RD Gestiones Empresariales | Trámites en Medellín</title>
 
-<meta name="description" content="RD Gestiones Empresariales en Medellín. Trámites DIAN, declaración de renta, RUT, IVA, alcaldías, apostillas y trámites vehiculares. Atención profesional segura y confiable.">
+<meta name="description" content="Especialistas en trámites DIAN, declaración de renta, RUT, IVA, alcaldías, apostillas y trámites vehiculares en Medellín. Atención profesional segura y confiable.">
 <meta name="keywords" content="trámites Medellín, DIAN Medellín, declaración de renta Medellín, RUT Medellín, apostillas Medellín, traspasos Medellín">
 <meta name="author" content="RD Gestiones Empresariales">
 
+<meta property="og:title" content="RD Gestiones Empresariales Medellín">
+<meta property="og:description" content="Soluciones rápidas y seguras en trámites tributarios y legales en Medellín.">
+<meta property="og:image" content="logo-rd.png">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="logo-rd.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-/* -------- CONTACTO MEJORADO -------- */
 
-#contacto {
-  text-align: center;
-}
-
-.titulo-contacto {
-  margin-bottom: 50px;
-  color: #d4af37;
-}
-
-.contacto-grid {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.sede {
-  background-color: #1a1a1a;
-  padding: 35px;
-  border-radius: 12px;
-  border: 1px solid #d4af37;
-  width: 420px;
-  text-align: left;
-  transition: 0.3s ease;
-}
-
-.sede:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(212,175,55,0.25);
-}
-
-.sede h3 {
-  color: #d4af37;
-  margin-top: 0;
-}
-/* -------------------- ESTILOS GENERALES -------------------- */
-
+/* -------- FONDO ANIMADO -------- */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0f0f0f;
+  font-family: 'Poppins', sans-serif;
   color: white;
   scroll-behavior: smooth;
+  background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #000000, #111);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
 }
 
-h1, h2, h3 {
-  color: #d4af37;
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
+
+h1, h2, h3 { color: #d4af37; }
 
 section {
   padding: 80px 20px;
@@ -68,24 +45,7 @@ section {
   margin: auto;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #d4af37;
-  color: black;
-  padding: 15px 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 20px;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: white;
-}
-
-/* -------------------- NAVBAR -------------------- */
-
+/* NAVBAR */
 nav {
   position: fixed;
   width: 100%;
@@ -99,7 +59,6 @@ nav {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 20px;
 }
 
@@ -113,59 +72,47 @@ nav {
   color: #d4af37;
   margin-left: 20px;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  font-weight: 600;
 }
 
-.links a:hover {
-  color: white;
-}
+.links a:hover { color: white; }
 
-/* -------------------- HEADER -------------------- */
-
+/* HEADER */
 header {
-  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: radial-gradient(circle, #1a1a1a 0%, #000 80%);
   padding-top: 60px;
 }
 
 .logo {
-  width: 420px;
+  width: 350px;
   max-width: 90%;
   margin-bottom: 30px;
   filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.6));
   transition: transform 0.5s ease;
 }
 
-.logo:hover {
-  transform: scale(1.05);
+.logo:hover { transform: scale(1.05); }
+
+.btn {
+  display: inline-block;
+  background-color: #d4af37;
+  color: black;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-header::before {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: glow 6s infinite alternate ease-in-out;
-}
+.btn:hover { background-color: white; }
 
-@keyframes glow {
-  from { transform: translate(-50%, -50%) scale(1); }
-  to { transform: translate(-50%, -50%) scale(1.2); }
-}
-
-/* -------------------- TARJETAS -------------------- */
-
+/* TARJETAS */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -185,26 +132,56 @@ header::before {
   box-shadow: 0 10px 25px rgba(212,175,55,0.3);
 }
 
-/* -------------------- CTA -------------------- */
-
-.cta {
-  text-align: center;
-  background: #111;
-  border-top: 1px solid #d4af37;
-  border-bottom: 1px solid #d4af37;
+/* CONTACTO */
+.contacto-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-/* -------------------- FOOTER -------------------- */
-
-footer {
-  text-align: center;
-  padding: 30px;
-  background-color: black;
-  font-size: 14px;
+.sede {
+  background-color: #1a1a1a;
+  padding: 35px;
+  border-radius: 12px;
+  border: 1px solid #d4af37;
+  width: 420px;
+  transition: 0.3s ease;
 }
 
-/* -------------------- WHATSAPP FLOAT -------------------- */
+.sede:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(212,175,55,0.25);
+}
 
+/* ANIMACIONES SCROLL */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BOTÓN ARRIBA */
+#topBtn {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  display: none;
+  background-color: #d4af37;
+  color: black;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -216,7 +193,13 @@ footer {
   border-radius: 50%;
   text-decoration: none;
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  z-index: 1000;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: black;
+  font-size: 14px;
 }
 
 </style>
@@ -224,126 +207,103 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-  <div class="nav-container">
-    <div class="brand">RD Gestiones</div>
-    <div class="links">
-      <a href="#quienes">Nosotros</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </div>
+<div class="nav-container">
+<div class="brand">RD Gestiones</div>
+<div class="links">
+<a href="#quienes">Nosotros</a>
+<a href="#servicios">Servicios</a>
+<a href="#contacto">Contacto</a>
+</div>
+</div>
 </nav>
 
-<!-- HEADER -->
 <header>
-  <img src="logo-rd.png" alt="Logo RD Gestiones Empresariales" class="logo">
-  <h1>RD Gestiones Empresariales</h1>
-  <p>Centro Integral de Trámites Administrativos, Tributarios y Jurídicos en Medellín</p>
-  <a href="https://wa.me/573017222991" target="_blank" class="btn">Contáctanos por WhatsApp</a>
+<img src="logo-rd.png" alt="Logo RD Gestiones" class="logo">
+<h1>RD Gestiones Empresariales</h1>
+<p>Soluciones rápidas, seguras y profesionales en trámites tributarios, legales y administrativos en Medellín.</p>
+<a href="https://wa.me/573017222991" target="_blank" class="btn">Contáctanos por WhatsApp</a>
 </header>
 
-<!-- QUIÉNES SOMOS -->
 <section id="quienes">
 <h2>¿Quiénes Somos?</h2>
-<p>
-Somos un establecimiento de comercio en Medellín especializado en trámites administrativos,
-tributarios y jurídicos. Contamos con respaldo de Contador Público y Abogado titulado,
-garantizando procesos seguros, claros y confiables.
-</p>
+<p>Somos un establecimiento especializado en trámites administrativos, tributarios y jurídicos en Medellín. Contamos con respaldo de Contador Público y Abogado titulado, garantizando procesos seguros, claros y confiables.</p>
 </section>
 
-<!-- POR QUÉ ELEGIRNOS -->
-<section>
-<h2>¿Por qué elegirnos?</h2>
-<div class="services">
-  <div class="card">
-    <h3>✔ Atención Personalizada</h3>
-    <p>Asesoría directa con profesional contable y jurídico.</p>
-  </div>
-  <div class="card">
-    <h3>✔ Procesos Seguros</h3>
-    <p>Manejo responsable y confidencial de su información.</p>
-  </div>
-  <div class="card">
-    <h3>✔ Experiencia y Respaldo</h3>
-    <p>Trámites claros, rápidos y sin complicaciones.</p>
-  </div>
-</div>
-</section>
-
-<!-- SERVICIOS -->
 <section id="servicios">
 <h2>Nuestros Servicios</h2>
 <div class="services">
-
-<div class="card">
-<h3>Trámites DIAN</h3>
-<p>RUT, Declaración de Renta, IVA, Facturación Electrónica, Devoluciones.</p>
-</div>
-
-<div class="card">
-<h3>Trámites Alcaldías</h3>
-<p>Predial, Industria y Comercio, Uso de Suelos, SISBEN, Acuerdos de Pago.</p>
-</div>
-
-<div class="card">
-<h3>Apostillas</h3>
-<p>Legalización de documentos y trámites para estudios en el exterior.</p>
-</div>
-
-<div class="card">
-<h3>Trámites Vehiculares</h3>
-<p>Traspasos e Impuesto Vehicular en Medellín y área metropolitana.</p>
-</div>
-
+<div class="card"><h3>Trámites DIAN</h3><p>RUT, Declaración de Renta, IVA, Facturación Electrónica y Devoluciones.</p></div>
+<div class="card"><h3>Trámites Alcaldías</h3><p>Predial, Industria y Comercio, Uso de Suelos y SISBEN.</p></div>
+<div class="card"><h3>Apostillas</h3><p>Legalización de documentos para estudios y trabajo en el exterior.</p></div>
+<div class="card"><h3>Trámites Vehiculares</h3><p>Traspasos e Impuesto Vehicular en Medellín y área metropolitana.</p></div>
 </div>
 </section>
 
-<!-- CTA -->
+<section>
+<h2>Lo que dicen nuestros clientes</h2>
+<div class="services">
+<div class="card"><p>"Excelente atención y rapidez."</p><strong>- María G.</strong></div>
+<div class="card"><p>"Proceso claro y sin complicaciones."</p><strong>- Carlos R.</strong></div>
+<div class="card"><p>"Muy profesionales y confiables."</p><strong>- Laura P.</strong></div>
+</div>
+</section>
+
+<section>
+<h2>Preguntas Frecuentes</h2>
+<div class="card"><h3>¿Cuánto tarda una declaración de renta?</h3><p>Entre 1 y 3 días según el caso.</p></div>
+<div class="card"><h3>¿Atienden virtual?</h3><p>Sí, atendemos presencial en Medellín y virtual a nivel nacional.</p></div>
+</section>
+
 <section id="contacto">
-  <h2 class="titulo-contacto">Contacto</h2>
+<h2>Contacto</h2>
+<div class="contacto-grid">
+<div class="sede">
+<h3>Sede Alpujarra</h3>
+<p>Cra 52 #42-60 Local 108 – CC Metrocentro 1</p>
+<p>301 722 2991</p>
+<p>rydtramitesvirtuales@gmail.com</p>
+</div>
 
-  <div class="contacto-grid">
-
-    <div class="sede">
-      <h3>Sede Alpujarra</h3>
-
-      <p><strong>Dirección:</strong><br>
-      Cra 52 #42-60 Local 108 – CC Metrocentro 1</p>
-
-      <p><strong>Teléfono:</strong><br>
-      301 722 2991</p>
-
-      <p><strong>Correo:</strong><br>
-      rydtramitesvirtuales@gmail.com</p>
-    </div>
-
-    <div class="sede">
-      <h3>Sede Centro Caracas</h3>
-
-      <p><strong>Dirección:</strong><br>
-      Calle 54 #45-06 Local 104</p>
-
-      <p><strong>WhatsApp:</strong><br>
-      300 901 2017</p>
-
-      <p><strong>Correo:</strong><br>
-      rdgestiones02@gmail.com</p>
-    </div>
-
-  </div>
+<div class="sede">
+<h3>Sede Centro Caracas</h3>
+<p>Calle 54 #45-06 Local 104</p>
+<p>300 901 2017</p>
+<p>rdgestiones02@gmail.com</p>
+</div>
+</div>
 </section>
-
-
 
 <footer>
 © 2026 RD Gestiones Empresariales – Seguridad y Calidad a su Servicio
 </footer>
 
-<!-- BOTÓN WHATSAPP -->
 <a href="https://wa.me/573017222991" target="_blank" class="whatsapp-float">💬</a>
+<button onclick="topFunction()" id="topBtn">↑</button>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+document.querySelectorAll('.card, .sede, section h2').forEach(el => {
+  el.classList.add('hidden');
+  observer.observe(el);
+});
+
+let mybutton = document.getElementById("topBtn");
+window.onscroll = function() {
+  mybutton.style.display =
+    document.documentElement.scrollTop > 300 ? "block" : "none";
+};
+
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
 
 </body>
 </html>
