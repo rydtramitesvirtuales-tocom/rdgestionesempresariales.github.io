@@ -29,27 +29,58 @@
 
 <style>
   /* -------- FONDO ANIMADO -------- */
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    scroll-behavior: smooth;
-    background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #000000, #111);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    font-weight: 400;
-    letter-spacing: 0.2px;
-  }
+  <section class="gestores">
+  ... (todo el código que te envié)
+<section class="gestores">
+  <h2 class="titulo">Nuestros Gestores</h2>
 
-  @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+  <div class="contenedor">
 
-  h1, h2, h3 { color: #d4af37; }
+    <!-- SEDE CENTRO -->
+    <div class="card">
+      <h3>SEDE CENTRO</h3>
 
-  section {
+      <div class="foto">
+        <img src="imagenes/richard.jpg" alt="Richard">
+      </div>
+
+      <div class="nombre">
+        RICHARD PIMENTEL GOMEZ MEDINA
+      </div>
+
+      <p>Cel: 3009012017</p>
+      <p>Mail: rdgestiones02@gmail.com</p>
+      <p>Calle 54 45-6, local 104 Medellín 050012, Antioquia, Colombia</p>
+
+      <a href="https://wa.me/573009012017" target="_blank" class="boton">
+        Contactar por WhatsApp
+      </a>
+    </div>
+
+
+    <!-- SEDE ALPUJARRA -->
+    <div class="card">
+      <h3>SEDE ALPUJARRA</h3>
+
+      <div class="foto">
+        <img src="imagenes/daniel.jpg" alt="Daniel">
+      </div>
+
+      <div class="nombre">
+        DANIEL EDUARDO GARCIA AGUILAR
+      </div>
+
+      <p>Cel: 3017222991</p>
+      <p>Mail: rydtramitesvirtuales@gmail.com</p>
+      <p>Cra 52 #42-60, Medellín, Antioquia, Colombia, Local 108</p>
+
+      <a href="https://wa.me/573017222991" target="_blank" class="boton">
+        Contactar por WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
     padding: 80px 20px;
     max-width: 1100px;
     margin: auto;
@@ -517,5 +548,107 @@
   };
 </script>
 
-</body>
-</html>
+body {
+  margin: 0;
+  background: #0c0c0c;
+  font-family: 'Georgia', serif;
+}
+
+.gestores {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.titulo {
+  color: #d4af37;
+  font-size: 34px;
+  margin-bottom: 60px;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 350px;
+  color: #e6c77b;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card h3 {
+  color: #d4af37;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.foto {
+  width: 260px;
+  height: 330px;
+  margin: auto;
+  border-radius: 150px;
+  overflow: hidden;
+  background: white;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nombre {
+  margin: 25px auto;
+  padding: 10px;
+  width: 90%;
+  font-weight: bold;
+  background: linear-gradient(90deg, #cfa13a, #f5d67b, #cfa13a);
+  color: black;
+}
+
+.card p {
+  margin: 8px 0;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #cfa13a, #f5d67b);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #d4af37;
+  <script>
+  const cards = document.querySelectorAll('.card');
+
+  const mostrarCards = () => {
+    const trigger = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+      const top = card.getBoundingClientRect().top;
+
+      if (top < trigger) {
+        card.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', mostrarCards);
+  window.addEventListener('load', mostrarCards);
+</script>
+}
