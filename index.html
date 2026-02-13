@@ -88,160 +88,59 @@ header {
   padding-top: 60px;
 }
 
-.logo {
-  width: 350px;
-  max-width: 90%;
-  margin-bottom: 30px;
-  filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.6));
-  transition: transform 0.5s ease;
+header h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-.logo:hover { transform: scale(1.05); }
-
-.btn {
-  display: inline-block;
-  background-color: #d4af37;
-  color: black;
-  padding: 15px 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 20px;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.btn:hover { background-color: white; }
-
-/* TARJETAS */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  background-color: #1a1a1a;
-  padding: 25px;
-  border-radius: 10px;
-  border: 1px solid #d4af37;
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(212,175,55,0.3);
+header p {
+  font-size: 20px;
+  max-width: 700px;
 }
 
 /* CONTACTO */
-.contacto-grid {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+#contacto {
+  text-align: center;
 }
 
-.sede {
-  background-color: #1a1a1a;
-  padding: 35px;
+.contact-card {
+  margin-top: 30px;
+  background: rgba(212, 175, 55, 0.08);
+  padding: 25px;
   border-radius: 12px;
   border: 1px solid #d4af37;
-  width: 420px;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
-.sede:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(212,175,55,0.25);
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
 }
 
-/* ANIMACIONES */
-.hidden {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+.contact-card h3 {
+  margin-bottom: 15px;
 }
 
-.show {
-  opacity: 1;
-  transform: translateY(0);
+.contact-card p {
+  margin: 8px 0;
+  font-size: 16px;
 }
 
-/* BOTÓN ARRIBA */
-#topBtn {
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-  display: none;
-  background-color: #d4af37;
-  color: black;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* WHATSAPP */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  font-size: 26px;
-  padding: 15px 18px;
-  border-radius: 50%;
+.contact-card a {
+  color: #d4af37;
   text-decoration: none;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  font-weight: 600;
 }
 
-/* MODAL SEDE */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-contenido {
-  background-color: #1a1a1a;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  border: 1px solid #d4af37;
-}
-
-.modal-contenido button {
-  margin: 10px;
-  padding: 12px 20px;
-  border: none;
-  background-color: #d4af37;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.modal-contenido button:hover {
-  background-color: white;
-}
-
-.cerrar {
-  background-color: gray !important;
-  color: white !important;
+.contact-card a:hover {
+  color: white;
 }
 
 footer {
   text-align: center;
-  padding: 30px;
-  background-color: black;
-  font-size: 14px;
+  padding: 20px;
+  background: black;
+  color: #d4af37;
 }
 
 </style>
@@ -250,125 +149,49 @@ footer {
 <body>
 
 <nav>
-<div class="nav-container">
-<div class="brand">RD Gestiones</div>
-<div class="links">
-<a href="#quienes">Nosotros</a>
-<a href="#servicios">Servicios</a>
-<a href="#contacto">Contacto</a>
-</div>
-</div>
+  <div class="nav-container">
+    <div class="brand">RD Gestiones Empresariales</div>
+    <div class="links">
+      <a href="#inicio">Inicio</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
 </nav>
 
-<header>
-<img src="logo-rd.png" alt="Logo RD Gestiones" class="logo">
-<h1>RD Gestiones Empresariales</h1>
-<p>Soluciones rápidas, seguras y profesionales en trámites tributarios, legales y administrativos en Medellín.</p>
-<button onclick="abrirSelector()" class="btn">Contáctanos por WhatsApp</button>
+<header id="inicio">
+  <h1>Soluciones Profesionales en Trámites</h1>
+  <p>Especialistas en trámites tributarios, legales y empresariales en Medellín. Atención rápida, segura y confiable.</p>
 </header>
 
-<section id="quienes">
-<h2>¿Quiénes Somos?</h2>
-<p>Somos un establecimiento especializado en trámites administrativos, tributarios y jurídicos en Medellín, con respaldo profesional contable y jurídico.</p>
-</section>
-
-<section id="servicios">
-<h2>Nuestros Servicios</h2>
-<div class="services">
-<div class="card"><h3>Trámites DIAN</h3><p>RUT, Declaración de Renta, IVA y Facturación Electrónica.</p></div>
-<div class="card"><h3>Trámites Alcaldías</h3><p>Predial, Industria y Comercio y Uso de Suelos.</p></div>
-<div class="card"><h3>Apostillas</h3><p>Legalización de documentos para estudios y trabajo en el exterior.</p></div>
-<div class="card"><h3>Trámites Vehiculares</h3><p>Traspasos e Impuesto Vehicular.</p></div>
-</div>
-</section>
-
-<section>
-<h2>Opiniones de Nuestros Clientes</h2>
-<p>Tu experiencia es muy importante para nosotros.</p>
-<a href="#" class="btn">Dejar una reseña en Google</a>
-</section>
-
 <section id="contacto">
-<h2>Contacto</h2>
-<div class="contacto-grid">
-<div class="sede">
-<h3>Sede Alpujarra</h3>
-<p>301 722 2991</p>
-</div>
-<div class="sede">
-<h3>Sede Centro Caracas</h3>
-<p>300 901 2017</p>
-</div>
-</div>
+  <h2>Contáctanos</h2>
+
+  <div class="contact-card">
+    <h3>Sede Centro Alpujarra</h3>
+    <p><strong>📍 Dirección:</strong> Cra 52 # 42 - 60 Local 108, Metrocentro 1, Sector Alpujarra del Metro</p>
+    <p><strong>📱 WhatsApp:</strong> 
+      <a href="https://wa.me/573017222991" target="_blank">301 722 2991</a>
+    </p>
+    <p><strong>📧 Email:</strong> 
+      <a href="mailto:rydtramitesvirtuales@gmail.com">rydtramitesvirtuales@gmail.com</a>
+    </p>
+  </div>
+
+  <div class="contact-card">
+    <h3>Sede Centro Caracas</h3>
+    <p><strong>📍 Dirección:</strong> Calle 54 # 45 - 06 Local 104, Medellín (cerca a la Cámara de Comercio)</p>
+    <p><strong>📱 WhatsApp:</strong> 
+      <a href="https://wa.me/573009012017" target="_blank">300 901 2017</a>
+    </p>
+    <p><strong>📧 Email:</strong> 
+      <a href="mailto:rdgestiones02@gmail.com">rdgestiones02@gmail.com</a>
+    </p>
+  </div>
 </section>
 
 <footer>
-© 2026 RD Gestiones Empresariales – Seguridad y Calidad a su Servicio
+  © 2026 RD Gestiones Empresariales - Todos los derechos reservados
 </footer>
-
-<a href="#" class="whatsapp-float" onclick="abrirSelector()">💬</a>
-<button onclick="topFunction()" id="topBtn">↑</button>
-
-<!-- MODAL -->
-<div id="selectorSede" class="modal">
-<div class="modal-contenido">
-<h3>¿Con cuál sede deseas comunicarte?</h3>
-<button onclick="irWhatsApp('alpujarra')">Sede Alpujarra</button>
-<button onclick="irWhatsApp('caracas')">Sede Centro Caracas</button>
-<br><br>
-<button onclick="cerrarSelector()" class="cerrar">Cancelar</button>
-</div>
-</div>
-
-<script>
-
-/* Animaciones */
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add('show');
-}
-});
-});
-document.querySelectorAll('.card, .sede, section h2').forEach(el => {
-el.classList.add('hidden');
-observer.observe(el);
-});
-
-/* Botón arriba */
-let mybutton = document.getElementById("topBtn");
-window.onscroll = function() {
-mybutton.style.display =
-document.documentElement.scrollTop > 300 ? "block" : "none";
-};
-function topFunction() {
-window.scrollTo({top: 0, behavior: 'smooth'});
-}
-
-/* WhatsApp Selector */
-function abrirSelector() {
-document.getElementById("selectorSede").style.display = "flex";
-}
-function cerrarSelector() {
-document.getElementById("selectorSede").style.display = "none";
-}
-function irWhatsApp(sede) {
-let numero = "";
-let mensaje = "";
-
-if (sede === "alpujarra") {
-numero = "573017222991";
-mensaje = "Hola, deseo información sobre trámites en la sede Alpujarra.";
-} else if (sede === "caracas") {
-numero = "573009012017";
-mensaje = "Hola, deseo información sobre trámites en la sede Centro Caracas.";
-}
-
-let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
-window.open(url, "_blank");
-}
-
-</script>
 
 </body>
 </html>
