@@ -32,20 +32,18 @@
 
 <style>
   /* -------- FONDO ANIMADO -------- */
-  body {
-    margin: 0;
-    body {
-  padding-top: 80px;
+ body {
+  margin: 0;
+  padding-top: 80px; /* Espacio para que no tape el menú fijo */
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+  background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #000000, #111);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    scroll-behavior: smooth;
-    background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #000000, #111);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    font-weight: 400;
-    letter-spacing: 0.2px;
-  }
 
   @keyframes gradientBG {
     0% { background-position: 0% 50%; }
