@@ -395,36 +395,25 @@ header {
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
 .logo-3d {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
+  font-family: 'Poppins', sans-serif; /* Más corporativa */
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
   color: #d4af37;
   text-transform: uppercase;
   text-align: center;
-  margin: 120px 0 20px 0; /* 👈 CAMBIA ESTO */
-  text-shadow: 
-     2px 2px 0 #b9962e,
-     4px 4px 0 #a07a1e,
-     6px 6px 0 #7f5e16;
-  animation: float 3s ease-in-out infinite;
+  margin: 140px 0 20px 0;
+
+  /* Sombra elegante, no exagerada */
+  text-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+
+  /* Animación muy sutil */
+  animation: floatSoft 6s ease-in-out infinite;
 }
 
-/* Animación subir-bajar */
-@keyframes float {
+@keyframes floatSoft {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-}
-
-/* Opcional: hacerlo responsive */
-@media (max-width: 768px) {
-  .logo-3d {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-3d {
-    font-size: 1.5rem;
-  }
+  50% { transform: translateY(-5px); }
 }
 </style>
 </head>
