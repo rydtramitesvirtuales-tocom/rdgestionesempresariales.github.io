@@ -524,23 +524,24 @@ header {
 <section id="agendar">
   <h2>Agendar Cita</h2>
   <div class="form-container">
-    <form action="mailto:rdgestiones02@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Nombre" placeholder="Nombre completo" required />
-      <input type="email" name="Correo" placeholder="Correo electrónico" required />
-      <input type="tel" name="Telefono" placeholder="Teléfono" required />
+ <form onsubmit="enviarWhatsApp(event)">
+  <input type="text" id="nombre" placeholder="Nombre completo" required />
+  <input type="email" id="correo" placeholder="Correo electrónico" required />
+  <input type="tel" id="telefono" placeholder="Teléfono" required />
 
-      <select name="Sede" required>
-        <option value="">Seleccione sede</option>
-        <option value="Alpujarra">Sede Alpujarra</option>
-        <option value="Centro Caracas">Sede Centro Caracas</option>
-      </select>
+  <select id="sede" required>
+    <option value="">Seleccione sede</option>
+    <option value="573017222991">Sede Alpujarra</option>
+    <option value="573009012017">Sede Centro Caracas</option>
+  </select>
 
-      <input type="text" name="Servicio" placeholder="Servicio requerido" required />
-      <input type="date" name="Fecha" required />
-      <textarea name="Mensaje" placeholder="Mensaje adicional"></textarea>
+  <input type="text" id="servicio" placeholder="Servicio requerido" required />
+  <input type="date" id="fecha" required />
+  <textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
 
-      <button type="submit" class="btn">Solicitar Cita</button>
-    </form>
+  <button type="submit" class="btn">Solicitar Cita</button>
+</form>
+
   </div>
 
   <section>
