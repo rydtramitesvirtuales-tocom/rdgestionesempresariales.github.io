@@ -1,203 +1,652 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RD Gestiones Empresariales | Trámites Empresariales en Medellín</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RD Gestiones Empresariales | Trámites en Medellín</title>
+<h1 class="logo-3d">RD Gestiones Empresariales</h1>
+  
+<meta name="description" content="Especialistas en trámites DIAN, declaración de renta, RUT, IVA, alcaldías, apostillas y trámites vehiculares en Medellín. Atención profesional segura y confiable." />
+<meta name="keywords" content="trámites Medellín, DIAN Medellín, declaración de renta Medellín, RUT Medellín, apostillas Medellín, traspasos Medellín" />
+<meta name="author" content="RD Gestiones Empresariales" />
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta property="og:title" content="RD Gestiones Empresariales Medellín" />
+<meta property="og:description" content="Soluciones rápidas y seguras en trámites tributarios y legales en Medellín." />
+<meta property="og:image" content="logo-rd.png" />
+<meta property="og:type" content="website" />
+
+<!-- SEO local Medellín -->
+<meta name="geo.region" content="CO-ANT" />
+<meta name="geo.placename" content="Medellín" />
+<meta name="geo.position" content="6.2442;-75.5812" />
+<meta name="ICBM" content="6.2442, -75.5812" />
+
+<link rel="icon" href="logo-rd.png" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+<!-- Font Awesome para íconos modernos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
+  /* -------- FONDO ANIMADO -------- */
 body {
-    background-color: #f4f6f9;
-    color: #1c1c1c;
+  margin: 0;
+  padding-top: 80px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+  background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #000000, #111);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }
 
-header {
-    background-color: #0A1F44;
-    padding: 20px 8%;
-    color: white;
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  h1, h2, h3 { color: #d4af37; }
+
+  section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  /* NAVBAR */
+ nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.95);
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+  .nav-container {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
+    padding: 0 20px;
+  }
 
-header h1 {
+  .brand {
+    color: #d4af37;
+    font-weight: bold;
     font-size: 20px;
-    font-weight: 600;
-}
+  }
 
-nav a {
-    color: white;
+  .links a {
+    color: #d4af37;
+    margin-left: 20px;
     text-decoration: none;
-    margin-left: 25px;
-    font-weight: 400;
-    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .links a:hover { color: white; }
+
+  /* HEADER */
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 180px; /* 👈 Aumenta este valor */
+  background: linear-gradient(135deg, rgba(13, 27, 44, 0.9), rgba(0,0,0,0.7));
+
 }
 
-.hero {
-    background-color: #0A1F44;
-    color: white;
-    padding: 100px 8%;
-}
-
-.hero h2 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    max-width: 600px;
+  .logo {
+    width: 350px;
+    max-width: 90%;
     margin-bottom: 30px;
-    font-weight: 300;
-}
+    filter: drop-shadow(0 0 25px rgba(212,175,55,0.6));
+    transition: transform 0.5s ease;
+  }
 
-.btn {
+  .logo:hover { transform: scale(1.05); }
+
+  header p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f5f5f5;
+    max-width: 720px;
+    margin: auto;
+  }
+
+  .btn {
     display: inline-block;
-    padding: 14px 28px;
-    background-color: #C6A75E;
-    color: white;
+    background-color: #d4af37;
+    color: black;
+    padding: 15px 30px;
     text-decoration: none;
-    font-weight: 600;
-    border-radius: 4px;
-}
-
-.section {
-    padding: 80px 8%;
-    background-color: white;
-}
-
-.section h3 {
-    font-size: 28px;
-    margin-bottom: 25px;
-    color: #0A1F44;
-}
-
-.services ul {
-    list-style: none;
+    font-weight: bold;
     margin-top: 20px;
-}
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-.services li {
-    margin-bottom: 12px;
-    font-weight: 500;
-}
+  .btn:hover { background-color: white; }
 
-.contact-section {
-    background-color: #f4f6f9;
-    padding: 80px 8%;
-}
+  /* TARJETAS */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+  }
 
-.contact-container {
+  .card {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #d4af37;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(212,175,55,0.3);
+  }
+
+  .card h3 {
     display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* FORMULARIO */
+  .form-container {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 6px;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    outline: 1px solid #d4af37;
+  }
+
+  /* CONTACTO */
+  .contacto-grid {
+    display: flex;
+    justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-}
+  }
 
-.contact-box {
-    background-color: #0A1F44;
-    color: white;
-    padding: 40px;
-    flex: 1;
-    min-width: 300px;
+  .sede {
+    background-color: #1a1a1a;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #d4af37;
+    width: 420px;
+    transition: 0.3s ease;
+  }
+
+  .sede:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(212,175,55,0.25);
+  }
+
+  /* BOTÓN ARRIBA */
+  #topBtn {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    display: none;
+    background-color: #d4af37;
+    color: black;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1500;
+  }
+
+  /* WHATSAPP FLOTANTE */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #d4af37;
+    border-radius: 50%;
+    padding: 14px;
+    box-shadow: 0 10px 25px rgba(212,175,55,0.6);
+    cursor: pointer;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 56px;
+    height: 56px;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #b9962e;
+  }
+
+  .whatsapp-float img {
+    display: block;
+    width: 28px;
+    height: auto;
+    filter: drop-shadow(0 0 2px rgba(212,175,55,0.8));
+  }
+
+  /* MODAL */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-contenido {
+    background-color: #1a1a1a;
+    padding: 30px 40px;
+    border-radius: 12px;
+    border: 1px solid #d4af37;
+    text-align: center;
+    color: #d4af37;
+    max-width: 320px;
+    width: 90%;
+    box-shadow: 0 0 40px rgba(212,175,55,0.4);
+  }
+
+  .modal-contenido h3 {
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .modal-contenido button {
+    background: #d4af37;
+    border: none;
+    padding: 12px 24px;
+    margin: 8px 5px;
     border-radius: 6px;
-}
-
-.contact-box h4 {
-    margin-bottom: 20px;
-    color: #C6A75E;
-}
-
-.contact-box a {
-    color: #C6A75E;
-    text-decoration: none;
     font-weight: 600;
-}
+    cursor: pointer;
+    color: black;
+    transition: background 0.3s ease;
+    min-width: 140px;
+  }
 
-.cta {
-    background-color: #0A1F44;
-    color: white;
-    text-align: center;
-    padding: 80px 8%;
-}
+  .modal-contenido button:hover {
+    background: #b9962e;
+  }
 
-footer {
-    background-color: #0A1F44;
-    color: white;
+  /* FOOTER */
+  footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    background-color: black;
     font-size: 14px;
+  }
+#asesores {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.asesores-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.asesor {
+  background-color: #1a1a1a;
+  border: 1px solid #d4af37;
+  border-radius: 12px;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 220px; /* limita el tamaño máximo de cada card */
+}
+
+.asesor:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(212,175,55,0.3);
+}
+
+.asesor img {
+  width: 100%;    /* se ajusta al ancho del contenedor */
+  height: auto;   /* mantiene proporción */
+  border-radius: 0; 
+  border: 2px solid #d4af37;
+  margin-bottom: 12px;
+}
+
+.asesor h3 {
+  margin: 8px 0 4px;
+  font-size: 1.1rem;
+  color: #d4af37;
+}
+
+.asesor p {
+  font-size: 0.95rem;
+  color: #f5f5f5;
+}
+
+/* Opcional: ajustar grid en móviles */
+@media (max-width: 600px) {
+  .asesores-container {
+    grid-template-columns: 1fr; /* una columna por fila */
+  }
+
+  .asesor {
+    max-width: 80%;
+  }
+}
+  .asesor {
+  position: relative; /* necesario para la info-hover */
+  overflow: hidden;
+}
+
+.info-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  color: #d4af37;
+  padding: 15px;
+  font-size: 0.9rem;
+  transform: translateY(100%); /* empieza oculta */
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.asesor:hover .info-hover {
+  transform: translateY(0); /* aparece al pasar el mouse */
+}
+/* Fuente 3D y flotante */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.logo-3d {
+  font-family: 'Poppins', sans-serif; /* Más corporativa */
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #d4af37;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 140px 0 20px 0;
+
+  /* Sombra elegante, no exagerada */
+  text-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+
+  /* Animación muy sutil */
+  animation: floatSoft 6s ease-in-out infinite;
+}
+
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+  <div class="nav-container">
+    <div class="brand">RD Gestiones</div>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+
 <header>
-    <h1>RD Gestiones Empresariales</h1>
-    <nav>
-        <a href="servicios.html">Servicios</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+  <img src="logo-rd.png" alt="Logo RD Gestiones" class="logo" />
+  <h1>RD Gestiones Empresariales</h1>
+  <p>Soluciones profesionales en trámites tributarios, legales y administrativos en Medellín. Acompañamiento completo desde la formalización hasta el cumplimiento empresarial.</p>
+
+  <div style="margin-top: 25px;">
+    <a href="javascript:void(0)" onclick="abrirSelector()" class="btn">Asesoría inmediata</a>
+    <a href="#servicios" class="btn" style="background: white; color:black; margin-left: 12px;">Ver servicios</a>
+  </div>
+
+  <p style="margin-top: 20px;">Soluciones rápidas, seguras y profesionales en trámites tributarios, legales y administrativos en Medellín.</p>
+  <a href="https://wa.me/573017222991" target="_blank" class="btn">Contáctanos por WhatsApp</a>
 </header>
 
-<section class="hero">
-    <h2>Soluciones Integrales en Trámites Empresariales</h2>
-    <p>Asesoría especializada en constitución de empresas, obligaciones tributarias y trámites ante entidades oficiales en Medellín.</p>
-    <a href="https://wa.me/573017222991" class="btn">Solicitar Asesoría</a>
+<section id="quienes">
+  <h2>¿Quiénes Somos?</h2>
+  <p>Somos un establecimiento especializado en trámites administrativos, tributarios y jurídicos en Medellín. Contamos con respaldo de Contador Público y Abogado titulado, garantizando procesos seguros, claros y confiables.</p>
 </section>
-
-<section class="section services">
-    <h3>Servicios Empresariales</h3>
-    <ul>
-        <li>✔ Constitución y formalización de empresas</li>
-        <li>✔ Registro y actualización del RUT</li>
-        <li>✔ Declaraciones de Industria y Comercio</li>
-        <li>✔ Renovación de matrícula mercantil</li>
-        <li>✔ Actualización de responsabilidades tributarias</li>
-    </ul>
-</section>
-
-<section class="contact-section" id="contacto">
-    <h3 style="color:#0A1F44; margin-bottom:40px;">Nuestras Sedes</h3>
-
-    <div class="contact-container">
-
-        <div class="contact-box">
-            <h4>Sede Alpujarra</h4>
-            <p>Cra 52 #42-60 Local 108 – CC Metrocentro 1</p>
-            <p>📞 <a href="https://wa.me/573017222991">301 722 2991</a></p>
-            <p>📧 <a href="mailto:rydtramitesvirtuales@gmail.com">rydtramitesvirtuales@gmail.com</a></p>
-        </div>
-
-        <div class="contact-box">
-            <h4>Sede Centro Caracas</h4>
-            <p>Calle 54 #45-06 Local 104</p>
-            <p>📞 <a href="https://wa.me/573009012017">300 901 2017</a></p>
-            <p>📧 <a href="mailto:rdgestiones02@gmail.com">rdgestiones02@gmail.com</a></p>
-        </div>
-
+<section id="asesores">
+  <h2>Conoce a Nuestros Asesores</h2>
+  <div class="asesores-container">
+    <div class="asesor">
+      <img src="img/richard.jpg" alt="Richard">
+      <h3>Richard</h3>
+      <p>Sede Centro Caracas</p>
+      <div class="info-hover">
+        <p>Auxiliar Administrativo especializado en trámites y gestión empresarial.</p>
+      </div>
     </div>
+
+    <div class="asesor">
+      <img src="img/daniel.jpg" alt="Daniel">
+      <h3>Daniel</h3>
+      <p>Sede Alpujarra</p>
+      <div class="info-hover">
+        <p>Auxiliar Administrativo especializado en trámites y atención al cliente.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="cta">
-    <h3>Inicie hoy mismo su proceso empresarial con respaldo profesional</h3>
-    <a href="https://wa.me/573017222991" class="btn">Agendar Asesoría</a>
+<section id="servicios">
+  <h2>Servicios Empresariales Integrales</h2>
+
+  <h3 style="text-align:center; margin-top:40px;">🚀 Para Emprendedores</h3>
+  <div class="services">
+
+    <div class="card">
+      <h3><i class="fa-solid fa-building-circle-check"></i> Constitución de Empresa</h3>
+      <p>Registro en Cámara de Comercio, matrícula mercantil, estatutos y formalización legal completa.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-file-lines"></i> Trámites DIAN</h3>
+      <p>Inscripción y actualización del RUT, firma electrónica, facturación electrónica y resolución de facturación.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-city"></i> Registro Municipal</h3>
+      <p>Industria y Comercio (ICA), uso de suelo y permisos ante Alcaldía.</p>
+    </div>
+
+  </div>
+
+  <h3 style="text-align:center; margin-top:60px;">🏬 Para Empresas Activas</h3>
+  <div class="services">
+
+    <div class="card">
+      <h3><i class="fa-solid fa-chart-line"></i> Declaraciones Tributarias</h3>
+      <p>Declaración de renta, IVA, correcciones tributarias y devoluciones ante DIAN.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-certificate"></i> Cámara de Comercio</h3>
+      <p>Renovación mercantil, certificados, RUP y cancelación de matrícula.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-shield-halved"></i> Trámites Especiales</h3>
+      <p>Registro de marca, apostillas, trámites vehiculares y procesos ante superintendencias.</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:50px;">
+    <p style="font-size:18px;">¿Necesitas asesoría personalizada?</p>
+    <button onclick="abrirSelector()" class="btn">Hablar con un asesor ahora</button>
+  </div>
+</section>
+
+<section id="agendar">
+  <h2>Agendar Cita</h2>
+  <div class="form-container">
+    <form action="mailto:rdgestiones02@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Nombre" placeholder="Nombre completo" required />
+      <input type="email" name="Correo" placeholder="Correo electrónico" required />
+      <input type="tel" name="Telefono" placeholder="Teléfono" required />
+
+      <select name="Sede" required>
+        <option value="">Seleccione sede</option>
+        <option value="Alpujarra">Sede Alpujarra</option>
+        <option value="Centro Caracas">Sede Centro Caracas</option>
+      </select>
+
+      <input type="text" name="Servicio" placeholder="Servicio requerido" required />
+      <input type="date" name="Fecha" required />
+      <textarea name="Mensaje" placeholder="Mensaje adicional"></textarea>
+
+      <button type="submit" class="btn">Solicitar Cita</button>
+    </form>
+  </div>
+
+  <section>
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="services">
+      <div class="card"><p>"Excelente atención y rapidez."</p><strong>- María G.</strong></div>
+      <div class="card"><p>"Proceso claro y sin complicaciones."</p><strong>- Carlos R.</strong></div>
+      <div class="card"><p>"Muy profesionales y confiables."</p><strong>- Laura P.</strong></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Preguntas Frecuentes</h2>
+    <div class="card"><h3>¿Cuánto tarda una declaración de renta?</h3><p>Entre 1 y 3 días según el caso.</p></div>
+    <div class="card"><h3>¿Atienden virtual?</h3><p>Sí, atendemos presencial en Medellín y virtual a nivel nacional.</p></div>
+  </section>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p><strong>Sede Alpujarra:</strong> 301 722 2991</p>
+  <p><strong>Sede Centro Caracas:</strong> 300 901 2017</p>
+  <div class="contacto-grid">
+    <div class="sede">
+      <h3>Sede Alpujarra</h3>
+      <p>Cra 52 #42-60 Local 108 – CC Metrocentro 1</p>
+      <p>301 722 2991</p>
+      <p>rydtramitesvirtuales@gmail.com</p>
+    </div>
+
+    <div class="sede">
+      <h3>Sede Centro Caracas</h3>
+      <p>Calle 54 #45-06 Local 104</p>
+      <p>300 901 2017</p>
+      <p>rdgestiones02@gmail.com</p>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top: 25px; color:#d4af37;">
+    <strong>Atención en Medellín y área metropolitana</strong><br/>
+    <span>Servicios presenciales y virtuales en toda Colombia</span>
+  </div>
 </section>
 
 <footer>
-    © 2026 RD Gestiones Empresariales | Medellín, Colombia
+  © 2026 RD Gestiones Empresariales. Todos los derechos reservados.
+  <br/>
+  Atención profesional en Medellín – Trámites tributarios, legales y administrativos.
 </footer>
+
+<!-- Botón WhatsApp flotante -->
+<a href="javascript:void(0)" id="whatsappBtn" class="whatsapp-float" title="Contáctanos por WhatsApp" aria-label="Botón WhatsApp">
+  <!-- Icono oficial WhatsApp SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" width="28px" height="28px">
+    <path d="M20.52 3.48A11.77 11.77 0 0012 0C5.37 0 .01 5.36.01 12a11.94 11.94 0 001.98 6.23L0 24l5.86-1.94a11.94 11.94 0 006.17 1.72h.02c6.63 0 12-5.37 12-12a11.77 11.77 0 00-3.53-8.3zM12 21.48a9.5 9.5 0 01-4.86-1.41l-.35-.21-3.49 1.15 1.18-3.41-.23-.36a9.52 9.52 0 116.75 4.24zm5.2-7.4c-.27-.14-1.58-.77-1.82-.86s-.42-.14-.6.14-.69.86-.85 1.04-.31.21-.58.07a7.49 7.49 0 01-2.2-1.3c-.41-.4-.76-.9-1.07-1.45s-.44-1.28-.16-1.8c.14-.27.6-.42.89-.6.3-.18.4-.3.6-.5s.2-.35.3-.58a.6.6 0 00-.02-.57c-.07-.18-.6-1.44-.83-2-.22-.52-.44-.45-.6-.46h-.52a1.11 1.11 0 00-.82.4 3.5 3.5 0 00-1.3 3.06 5.6 5.6 0 001.27 2.9 12.88 12.88 0 005.1 5.1 6 6 0 002.7 1.3 3.48 3.48 0 003.05-1.3 3.45 3.45 0 00.44-3.07c-.05-.1-.2-.15-.44-.27z"/>
+  </svg>
+</a>
+
+<!-- Modal selector de sede -->
+<div id="selectorSede" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+  <div class="modal-contenido">
+    <h3 id="modalTitle">¿Con cuál sede deseas comunicarte?</h3>
+    <button onclick="irWhatsApp('573017222991')">Sede Alpujarra</button>
+    <button onclick="irWhatsApp('573009012017')">Sede Centro Caracas</button>
+    <button onclick="cerrarModal()">Cancelar</button>
+  </div>
+</div>
+
+<button onclick="topFunction()" id="topBtn" aria-label="Volver arriba">↑</button>
+
+<script>
+  // Mostrar botón "volver arriba"
+  let mybutton = document.getElementById("topBtn");
+
+  window.onscroll = function() {
+    mybutton.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
+  };
+
+  function topFunction() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  // Abrir modal WhatsApp al clicar botón flotante
+  document.getElementById('whatsappBtn').addEventListener('click', () => {
+    document.getElementById('selectorSede').style.display = 'flex';
+  });
+
+  // Abrir WhatsApp con número seleccionado
+  function irWhatsApp(numero) {
+    window.open('https://wa.me/' + numero, '_blank');
+    cerrarModal();
+  }
+
+  // Cerrar modal
+  function cerrarModal() {
+    document.getElementById('selectorSede').style.display = 'none';
+  }
+
+  // Cerrar modal si se clickea fuera del contenido
+  window.onclick = function(event) {
+    const modal = document.getElementById('selectorSede');
+    if (event.target === modal) {
+      cerrarModal();
+    }
+  };
+</script>
 
 </body>
 </html>
