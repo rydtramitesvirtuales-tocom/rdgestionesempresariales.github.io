@@ -44,12 +44,6 @@ body {
   letter-spacing: 0.2px;
 }
 
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 
   h1, h2, h3 { color: #d4af37; }
 
@@ -555,7 +549,7 @@ body {
 <section id="agendar">
   <h2>Agendar Cita</h2>
   <div class="form-container">
- <form onsubmit="enviarWhatsApp(event)">
+ <form id="formCita">
   <input type="text" id="nombre" placeholder="Nombre completo" required />
   <input type="email" id="correo" placeholder="Correo electrónico" required />
   <input type="tel" id="telefono" placeholder="Teléfono" required />
@@ -652,10 +646,7 @@ Mensaje: ${mensaje}`;
 </script>
 
 <script>
-document.getElementById("formCita").addEventListener("submit", function(e) {
-  e.preventDefault();
-  ...
-});
+
 </script>
 
 </body>
