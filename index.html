@@ -28,40 +28,28 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
-  /* -------- FONDO ANIMADO -------- */
 
-// Función para enviar datos por WhatsApp
-document.getElementById("formCita").addEventListener("submit", function(e) {
-  e.preventDefault();
+/* -------- FONDO ANIMADO -------- */
 
-  let nombre = document.getElementById("nombre").value;
-  let correo = document.getElementById("correo").value;
-  let telefono = document.getElementById("telefono").value;
-  let sede = document.getElementById("sede").value;
-  let servicio = document.getElementById("servicio").value;
-  let fecha = document.getElementById("fecha").value;
-  let mensaje = document.getElementById("mensaje").value;
-
-  let texto = `Hola, deseo agendar una cita:%0A
-Nombre: ${nombre}%0A
-Correo: ${correo}%0A
-Teléfono: ${telefono}%0A
-Servicio: ${servicio}%0A
-Fecha: ${fecha}%0A
-Mensaje: ${mensaje}`;
-
-  // Abrir WhatsApp con el número de la sede seleccionada
-  window.open(`https://wa.me/${sede}?text=${texto}`, "_blank");
-});
-
+body {
+  margin: 0;
+  padding-top: 80px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+  background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #000000, #111);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }
 
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-  @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
 
   h1, h2, h3 { color: #d4af37; }
 
@@ -663,6 +651,12 @@ Mensaje: ${mensaje}`;
 });
 </script>
 
+<script>
+document.getElementById("formCita").addEventListener("submit", function(e) {
+  e.preventDefault();
+  ...
+});
+</script>
 
 </body>
 </html>
