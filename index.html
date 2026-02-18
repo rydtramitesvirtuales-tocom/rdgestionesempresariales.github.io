@@ -594,6 +594,8 @@ header {
 
 <script>
   <script>
+
+// -------- FORMULARIO WHATSAPP --------
 function enviarWhatsApp(e) {
   e.preventDefault();
 
@@ -615,42 +617,41 @@ Mensaje: ${mensaje}`;
 
   window.open(`https://wa.me/${sede}?text=${texto}`, '_blank');
 }
-</script>
 
-  // Mostrar botón "volver arriba"
-  let mybutton = document.getElementById("topBtn");
 
-  window.onscroll = function() {
-    mybutton.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
-  };
+// -------- BOTÓN VOLVER ARRIBA --------
+let mybutton = document.getElementById("topBtn");
 
-  function topFunction() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  }
+window.onscroll = function() {
+  mybutton.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
+};
 
-  // Abrir modal WhatsApp al clicar botón flotante
-  document.getElementById('whatsappBtn').addEventListener('click', () => {
-    document.getElementById('selectorSede').style.display = 'flex';
-  });
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
 
-  // Abrir WhatsApp con número seleccionado
-  function irWhatsApp(numero) {
-    window.open('https://wa.me/' + numero, '_blank');
+
+// -------- MODAL WHATSAPP --------
+document.getElementById('whatsappBtn').addEventListener('click', () => {
+  document.getElementById('selectorSede').style.display = 'flex';
+});
+
+function irWhatsApp(numero) {
+  window.open('https://wa.me/' + numero, '_blank');
+  cerrarModal();
+}
+
+function cerrarModal() {
+  document.getElementById('selectorSede').style.display = 'none';
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('selectorSede');
+  if (event.target === modal) {
     cerrarModal();
   }
+};
 
-  // Cerrar modal
-  function cerrarModal() {
-    document.getElementById('selectorSede').style.display = 'none';
-  }
-
-  // Cerrar modal si se clickea fuera del contenido
-  window.onclick = function(event) {
-    const modal = document.getElementById('selectorSede');
-    if (event.target === modal) {
-      cerrarModal();
-    }
-  };
 </script>
 
 </body>
