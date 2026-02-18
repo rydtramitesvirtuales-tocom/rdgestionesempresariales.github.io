@@ -620,19 +620,22 @@ header {
 </div>
 
 <button onclick="topFunction()" id="topBtn" aria-label="Volver arriba">↑</button>
-  <script>
-
-// -------- FORMULARIO WHATSAPP --------
-function enviarWhatsApp(e) {
+<script>
+document.getElementById("formCita").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  let nombre = document.getElementById("nombre").value;
-  let correo = document.getElementById("correo").value;
-  let telefono = document.getElementById("telefono").value;
+  let nombre = document.getElementById("nombre").value.trim();
+  let correo = document.getElementById("correo").value.trim();
+  let telefono = document.getElementById("telefono").value.trim();
   let sede = document.getElementById("sede").value;
-  let servicio = document.getElementById("servicio").value;
+  let servicio = document.getElementById("servicio").value.trim();
   let fecha = document.getElementById("fecha").value;
-  let mensaje = document.getElementById("mensaje").value;
+  let mensaje = document.getElementById("mensaje").value.trim();
+
+  if (!sede) {
+    alert("Por favor selecciona una sede.");
+    return;
+  }
 
   let texto = `Hola, deseo agendar una cita:%0A
 Nombre: ${nombre}%0A
@@ -642,44 +645,11 @@ Servicio: ${servicio}%0A
 Fecha: ${fecha}%0A
 Mensaje: ${mensaje}`;
 
-  window.open(`https://wa.me/${sede}?text=${texto}`, '_blank');
-}
-
-
-// -------- BOTÓN VOLVER ARRIBA --------
-let mybutton = document.getElementById("topBtn");
-
-window.onscroll = function() {
-  mybutton.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
-};
-
-function topFunction() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
-}
-
-
-// -------- MODAL WHATSAPP --------
-document.getElementById('whatsappBtn').addEventListener('click', () => {
-  document.getElementById('selectorSede').style.display = 'flex';
+  // Abre WhatsApp con el número correspondiente a la sede
+  window.open(`https://wa.me/${sede}?text=${texto}`, "_blank");
 });
-
-function irWhatsApp(numero) {
-  window.open('https://wa.me/' + numero, '_blank');
-  cerrarModal();
-}
-
-function cerrarModal() {
-  document.getElementById('selectorSede').style.display = 'none';
-}
-
-window.onclick = function(event) {
-  const modal = document.getElementById('selectorSede');
-  if (event.target === modal) {
-    cerrarModal();
-  }
-};
-
 </script>
+
 
 </body>
 </html>
