@@ -424,10 +424,6 @@ header {
   animation: floatSoft 6s ease-in-out infinite;
 }
 
-@keyframes floatSoft {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-}
 body {
   margin: 0;
   padding-top: 80px;
@@ -614,7 +610,6 @@ body {
 
   <button type="submit" class="btn">Solicitar Cita</button>
 </form>
-
   </div>
   <section>
     <h2>Lo que dicen nuestros clientes</h2>
@@ -705,7 +700,6 @@ Mensaje: ${mensaje}`;
 // ================= FORMULARIO CITA =================
 document.getElementById("formCita").addEventListener("submit", function(e) {
   e.preventDefault();
-
   let nombre = document.getElementById("nombre").value.trim();
   let correo = document.getElementById("correo").value.trim();
   let telefono = document.getElementById("telefono").value.trim();
@@ -779,11 +773,14 @@ function scrollFunction() {
 function topFunction() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-  <script>
-document.querySelectorAll('.faq-item').forEach(item=>{
-  item.addEventListener('click', ()=>{ item.classList.toggle('active'); });
-});
 <script>
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.addEventListener('click', ()=>{
+    item.classList.toggle('active');
+  });
+});
+</script>
+
 let count = 0;
 let target = 250; // Cambia según tu objetivo
 let speed = 20;
