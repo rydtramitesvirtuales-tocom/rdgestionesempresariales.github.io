@@ -774,13 +774,6 @@ function topFunction() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 <script>
-document.querySelectorAll('.faq-item').forEach(item=>{
-  item.addEventListener('click', ()=>{
-    item.classList.toggle('active');
-  });
-});
-</script>
-
 let count = 0;
 let target = 250; // Cambia según tu objetivo
 let speed = 20;
@@ -790,7 +783,7 @@ let interval = setInterval(()=>{
   else{ clearInterval(interval); }
 }, speed);
 </script>
-<script>
+
 function revealOnScroll(){
   document.querySelectorAll('.reveal').forEach(el=>{
     let top = el.getBoundingClientRect().top;
