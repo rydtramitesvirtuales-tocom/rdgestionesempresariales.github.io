@@ -53,42 +53,37 @@
 /* =======================
    BODY
    ======================= */
+/* BODY */
 body {
   margin: 0;
   padding-top: 80px;
   font-family: 'Poppins', sans-serif;
-  color: #F5F5F5; /* texto más claro para leer mejor */
+  color: #F5F5F5; /* texto más claro */
   scroll-behavior: smooth;
-  background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #0a0a0a, #111111);
+  background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #000000, #111);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   font-weight: 400;
   letter-spacing: 0.2px;
 }
 
-/* =======================
-   TITULOS
-   ======================= */
+/* TITULOS */
 h1, h2, h3 { 
-  color: #C9A66B; /* dorado cálido */
+  color: #C9A66B; /* dorado más cálido */
   margin-bottom: 20px;
 }
 
-/* =======================
-   SECCIONES
-   ======================= */
+/* SECCIONES */
 section {
   padding: 80px 20px;
   max-width: 1100px;
-  margin: 40px auto;
-  background-color: #1E1E1E; /* bloque gris oscuro para destacar contenido */
+  margin: auto;
+  background-color: #1E1E1E; /* bloques gris oscuro */
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
 }
 
-/* =======================
-   NAVBAR
-   ======================= */
+/* NAVBAR */
 nav {
   position: fixed;
   top: 0;
@@ -118,16 +113,13 @@ nav {
   margin-left: 20px;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
 }
 
 .links a:hover { 
-  color: #FFD700; /* hover dorado brillante */
+  color: #FFD700; /* hover más llamativo */
 }
 
-/* =======================
-   BOTONES PRINCIPALES
-   ======================= */
+/* BOTONES PRINCIPALES */
 .button-cta {
   background-color: #FFD700;
   color: #121212;
@@ -146,9 +138,7 @@ nav {
   color: #FFF;
 }
 
-/* =======================
-   IMÁGENES
-   ======================= */
+/* IMÁGENES */
 img {
   border-radius: 8px;
   max-width: 100%;
@@ -156,41 +146,15 @@ img {
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-/* =======================
-   LINKS INTERNOS
-   ======================= */
-a {
-  color: #C9A66B;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #FFD700;
-}
-
-/* =======================
-   RESPONSIVE
-   ======================= */
+/* MEDIA QUERIES - RESPONSIVE */
 @media (max-width: 768px) {
   section {
     padding: 40px 15px;
   }
-
   h1 { font-size: 1.8em; }
   h2 { font-size: 1.5em; }
-  h3 { font-size: 1.2em; }
-
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .links a {
-    margin: 10px 0;
-  }
 }
+
 
   .asesor {
   position: relative; /* necesario para la info-hover */
