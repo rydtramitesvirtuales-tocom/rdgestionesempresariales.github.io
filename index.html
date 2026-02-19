@@ -636,6 +636,36 @@ Mensaje: ${mensaje}`;
   this.reset();
 });
 </script>
+<script>
+// ===== MODAL WHATSAPP =====
+const modal = document.getElementById("selectorSede");
+const whatsappBtn = document.getElementById("whatsappBtn");
+
+// Abrir modal al hacer clic en botón flotante
+whatsappBtn.addEventListener("click", function() {
+  modal.style.display = "flex";
+});
+
+// Función para ir a WhatsApp según sede
+function irWhatsApp(numero) {
+  let mensaje = "Hola, quiero recibir asesoría.";
+  let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, "_blank");
+  cerrarModal();
+}
+
+// Cerrar modal
+function cerrarModal() {
+  modal.style.display = "none";
+}
+
+// Cerrar si se hace clic fuera del contenido
+window.onclick = function(event) {
+  if (event.target === modal) {
+    cerrarModal();
+  }
+};
+</script>
 
 </body>
 </html>
