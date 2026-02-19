@@ -667,40 +667,6 @@ body {
 
 <button onclick="topFunction()" id="topBtn" aria-label="Volver arriba">↑</button>
 <script>
-document.querySelectorAll('.faq-item').forEach(item=>{
-  item.addEventListener('click', ()=>{
-    item.classList.toggle('active');
-  });
-});
-</script>
-
-  let nombre = document.getElementById("nombre").value.trim();
-  let correo = document.getElementById("correo").value.trim();
-  let telefono = document.getElementById("telefono").value.trim();
-  let sede = document.getElementById("sede").value;
-  let servicio = document.getElementById("servicio").value.trim();
-  let fecha = document.getElementById("fecha").value;
-  let mensaje = document.getElementById("mensaje").value.trim();
-
-  if (!sede) {
-    alert("Por favor selecciona una sede.");
-    return;
-  }
-
-  let texto = `Hola, deseo agendar una cita:%0A
-Nombre: ${nombre}%0A
-Correo: ${correo}%0A
-Teléfono: ${telefono}%0A
-Servicio: ${servicio}%0A
-Fecha: ${fecha}%0A
-Mensaje: ${mensaje}`;
-
-  // Abre WhatsApp con el número correspondiente a la sede
-  window.open(`https://wa.me/${sede}?text=${texto}`, "_blank");
-  this.reset();
-});
-</script>
-<script>
 // ================= FORMULARIO CITA =================
 document.getElementById("formCita").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -767,27 +733,26 @@ function irWhatsApp(numero) {
 // ================= BOTÓN VOLVER ARRIBA =================
 const topBtn = document.getElementById("topBtn");
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
+window.onscroll = function() {
   topBtn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) 
       ? "block" : "none";
-}
+};
 
 function topFunction() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-<script>
+
+// ================= CONTADOR =================
 let count = 0;
-let target = 250; // Cambia según tu objetivo
+let target = 250;
 let speed = 20;
 let counter = document.getElementById('count');
 let interval = setInterval(()=>{
   if(count < target){ count++; counter.textContent = count; }
   else{ clearInterval(interval); }
 }, speed);
-</script>
 
+// ================= EFECTO REVEAL =================
 function revealOnScroll(){
   document.querySelectorAll('.reveal').forEach(el=>{
     let top = el.getBoundingClientRect().top;
