@@ -662,6 +662,17 @@ whatsappBtn.addEventListener("click", function() {
 
 // Función para redirigir según dispositivo
 <script>
+// ===== SELECTOR WHATSAPP PREMIUM CORREGIDO =====
+
+const modal = document.getElementById("selectorSede");
+const whatsappBtn = document.getElementById("whatsappBtn");
+
+// Abrir modal
+whatsappBtn.addEventListener("click", function() {
+  modal.style.display = "flex";
+});
+
+// Función para ir a WhatsApp
 function irWhatsApp(numero) {
 
   let sedeNombre = numero === "573017222991" 
@@ -679,7 +690,7 @@ function irWhatsApp(numero) {
     url = `https://web.whatsapp.com/send?phone=${numero}&text=${mensajeCodificado}`;
   }
 
-  // 🔥 ENVÍA EVENTO A GOOGLE ANALYTICS
+  // Evento para Google Analytics
   if (typeof gtag === "function") {
     gtag('event', 'click_whatsapp', {
       sede: sedeNombre
@@ -689,7 +700,20 @@ function irWhatsApp(numero) {
   window.open(url, "_blank");
   cerrarModal();
 }
+
+// Cerrar modal
+function cerrarModal() {
+  modal.style.display = "none";
+}
+
+// Cerrar si hacen clic fuera
+window.onclick = function(event) {
+  if (event.target === modal) {
+    cerrarModal();
+  }
+};
 </script>
+
 
 
 
