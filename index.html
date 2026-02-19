@@ -667,8 +667,12 @@ body {
 
 <button onclick="topFunction()" id="topBtn" aria-label="Volver arriba">↑</button>
 <script>
-document.getElementById("formCita").addEventListener("submit", function(e) {
-  e.preventDefault();
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.addEventListener('click', ()=>{
+    item.classList.toggle('active');
+  });
+});
+</script>
 
   let nombre = document.getElementById("nombre").value.trim();
   let correo = document.getElementById("correo").value.trim();
