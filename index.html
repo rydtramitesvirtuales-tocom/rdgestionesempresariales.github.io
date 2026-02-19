@@ -607,8 +607,16 @@ body {
   <input type="text" id="servicio" placeholder="Servicio requerido" required />
   <input type="date" id="fecha" required />
   <textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
-
-  <button type="submit" class="btn">Solicitar Cita</button>
+<div style="margin-top:10px;">
+  <input type="checkbox" id="autorizacion" name="autorizacion" required>
+  <label for="autorizacion" style="font-size:14px;">
+    He leído y acepto la 
+    <a href="politica-datos.html" target="_blank">
+      Política de Tratamiento de Datos
+    </a>
+  </label>
+</div>
+  <button type="submit">Agendar Cita</button>
 </form>
   </div>
   <section>
@@ -644,6 +652,7 @@ body {
 <footer>
   © 2026 RD Gestiones Empresariales. Todos los derechos reservados.
   <br/>
+ <a href="politica-datos.html">Política de Tratamiento de Datos</a>
   Atención profesional en Medellín – Trámites tributarios, legales y administrativos.
 </footer>
 
