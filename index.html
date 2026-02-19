@@ -661,6 +661,7 @@ whatsappBtn.addEventListener("click", function() {
 });
 
 // Función para redirigir según dispositivo
+<script>
 function irWhatsApp(numero) {
 
   let sedeNombre = numero === "573017222991" 
@@ -672,28 +673,24 @@ function irWhatsApp(numero) {
 
   let url;
 
-  if (esMovil()) {
+  if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
     url = `https://wa.me/${numero}?text=${mensajeCodificado}`;
   } else {
     url = `https://web.whatsapp.com/send?phone=${numero}&text=${mensajeCodificado}`;
   }
 
+  // 🔥 ENVÍA EVENTO A GOOGLE ANALYTICS
+  if (typeof gtag === "function") {
+    gtag('event', 'click_whatsapp', {
+      sede: sedeNombre
+    });
+  }
+
   window.open(url, "_blank");
   cerrarModal();
 }
-
-// Cerrar modal
-function cerrarModal() {
-  modal.style.display = "none";
-}
-
-// Cerrar si se hace clic fuera
-window.onclick = function(event) {
-  if (event.target === modal) {
-    cerrarModal();
-  }
-};
 </script>
+
 
 
 </body>
