@@ -111,21 +111,18 @@
 .reveal { opacity:0; transform:translateY(40px); transition:all 0.8s ease; padding:50px 20px; }
 .reveal.active { opacity:1; transform:translateY(0); }
 
-/* -------- FONDO ANIMADO -------- */
-
+/* REEMPLAZAR BLOQUE BODY */
 body {
   margin: 0;
   padding-top: 80px;
   font-family: 'Poppins', sans-serif;
   color: white;
   scroll-behavior: smooth;
-  background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #000000, #111);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  /* Degradado premium en tonos oscuros */
+  background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 100%);
   font-weight: 400;
   letter-spacing: 0.2px;
 }
-
 
   h1, h2, h3 { color: #d4af37; }
 
