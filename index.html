@@ -754,13 +754,13 @@ body {
 <section id="asesores" style="padding: 20px 20px 60px 20px; text-align: center; position: relative; margin-top: -20px;">
   <h2 style="color: #d4af37; font-size: 2rem; margin-bottom: 15px;">Conoce a Nuestros Asesores</h2>
   
-  <!-- Reducimos el margin-top de este contenedor de 40px a 10px para acercar las tarjetas al título -->
   <div style="display: flex; flex-wrap: wrap; gap: 35px; justify-content: center; margin-top: 10px;">
     
     <!-- Tarjeta Richard -->
     <div class="asesor" style="position: relative; background: linear-gradient(135deg, #1a1a1a, #111111); border: 1px solid #d4af37; border-radius: 16px; padding: 20px; width: 100%; max-width: 260px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.5); transition: 0.3s;">
-      <img src="img/richard.jpg" alt="Richard" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid rgba(212, 175, 55, 0.5); margin-bottom: 15px;">
-      <h3 style="margin: 10px 0 5px; font-size: 1.25rem; color: #d4af37; font-weight: 600;">Richard</h3>
+      <!-- Recorte estratégico para ocultar datos inferiores de la imagen -->
+      <img src="img/richard.jpg" alt="Richard" style="width: 100%; height: 230px; object-fit: cover; object-position: top; border-radius: 10px; border: 1px solid rgba(212, 175, 55, 0.5); margin-bottom: 15px;">
+      <h3 style="margin: 10px 0 5px; font-size: 1.25rem; color: #d4af37; font-weight: 600;">RICHARD GOMEZ</h3>
       <p style="font-size: 0.95rem; color: #a0a0a0; margin-bottom: 5px;">Sede Centro Caracas</p>
       
       <div class="info-hover" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 10, 0.95); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; transition: 0.4s;">
@@ -771,8 +771,9 @@ body {
 
     <!-- Tarjeta Daniel -->
     <div class="asesor" style="position: relative; background: linear-gradient(135deg, #1a1a1a, #111111); border: 1px solid #d4af37; border-radius: 16px; padding: 20px; width: 100%; max-width: 260px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.5); transition: 0.3s;">
-      <img src="img/daniel.jpg" alt="Daniel" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid rgba(212, 175, 55, 0.5); margin-bottom: 15px;">
-      <h3 style="margin: 10px 0 5px; font-size: 1.25rem; color: #d4af37; font-weight: 600;">Daniel</h3>
+      <!-- Recorte estratégico para ocultar datos inferiores de la imagen -->
+      <img src="img/daniel.jpg" alt="Daniel" style="width: 100%; height: 230px; object-fit: cover; object-position: top; border-radius: 10px; border: 1px solid rgba(212, 175, 55, 0.5); margin-bottom: 15px;">
+      <h3 style="margin: 10px 0 5px; font-size: 1.25rem; color: #d4af37; font-weight: 600;">DANIEL GARCIA</h3>
       <p style="font-size: 0.95rem; color: #a0a0a0; margin-bottom: 5px;">Sede Alpujarra</p>
       
       <div class="info-hover" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 10, 0.95); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; transition: 0.4s;">
@@ -783,6 +784,7 @@ body {
 
   </div>
 </section>
+
 
 
 <section id="servicios">
