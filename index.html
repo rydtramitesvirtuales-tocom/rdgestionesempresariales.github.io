@@ -887,16 +887,16 @@ body {
   <input type="text" id="servicio" placeholder="Servicio requerido" required />
   <input type="date" id="fecha" required />
   <textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
-<div style="margin-top:10px;">
-  <input type="checkbox" id="autorizacion" name="autorizacion" required>
-  <label for="autorizacion" style="font-size:14px;">
-    He leído y acepto la 
-    <a href="politica-datos.html" target="_blank">
-      Política de Tratamiento de Datos
-    </a>
-  </label>
-</div>
-  <button type="submit">Agendar Cita</button>
+    <!-- Contenedor alineado para el Checkbox y el Texto Legal -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 20px; margin-bottom: 20px; width: 100%;">
+      <input type="checkbox" id="autorizacion" name="autorizacion" required style="accent-color: #d4af37; cursor: pointer; width: 16px; height: 16px; margin: 0;">
+      <label for="autorizacion" style="color: #ffffff; font-size: 14px; cursor: pointer; text-align: left; user-select: none;">
+        He leído y acepto la <a href="politica-datos.html" target="_blank" style="color: #d4af37; text-decoration: underline; font-weight: bold; transition: 0.3s;">Política de Tratamiento de Datos</a>
+      </label>
+    </div>
+
+    <button type="submit">Agendar Cita</button>
+
 </form>
   </div>
   <section>
