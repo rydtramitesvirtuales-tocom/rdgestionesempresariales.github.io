@@ -28,6 +28,80 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
+   /* ===== ESTILOS DEL HERO EN DOS COLUMNAS OPTIMIZADO ===== */
+  header {
+    min-height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 40px 20px;
+    background: linear-gradient(135deg, rgba(13, 27, 44, 0.9), rgba(0,0,0,0.7));
+    box-sizing: border-box;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .hero-text {
+    flex: 1;
+    min-width: 320px;
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    text-align: left;
+    font-size: 2.6rem;
+    margin-bottom: 5px;
+    line-height: 1.2;
+    color: #d4af37;
+  }
+
+  .hero-text h2 {
+    text-align: left;
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    max-width: 550px;
+    text-align: left;
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+  }
+
+  .logo {
+    width: 360px;
+    max-width: 100%;
+    filter: drop-shadow(0 0 25px rgba(212,175,55,0.35));
+    transition: transform 0.5s ease;
+  }
+
+  @media (max-width: 768px) {
+    .hero-container { flex-direction: column-reverse; text-align: center; }
+    .hero-text, .hero-text h1, .hero-text h2, .hero-text p { text-align: center; margin: auto; }
+    .hero-text p { margin-bottom: 20px; }
+    .logo { width: 260px; margin-bottom: 20px; }
+  }
+
   /* ===== FORMULARIO PREMIUM ===== */
 
 #agendar {
