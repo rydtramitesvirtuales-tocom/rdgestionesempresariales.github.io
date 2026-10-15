@@ -450,159 +450,190 @@
     </div>
   </section>
 
-  <!-- FORMULARIO DE AGENDAMIENTO -->
-  <section id="agendar" class="reveal">
-    <h2>Agendar una Cita</h2>
-    <div class="form-container">
-      <form id="formCita">
-        <input type="text" id="nombre" placeholder="Tu Nombre Completo" required>
-        <input type="email" id="correo" placeholder="Tu Correo Electrónico" required>
-        <input type="tel" id="telefono" placeholder="Tu Teléfono Celular" required>
-        
-        <select id="sede" required>
-          <option value="" disabled selected>Seleccione la sede de atención</option>
-          <option value="Alpujarra">Sede Alpujarra</option>
-          <option value="Centro Caracas">Sede Centro Caracas</option>
-        </select>
+ <section id="agendar">
+  <h2>Agendar Cita</h2>
+  <div class="form-container">
+    <form id="formCita">
+      <input type="text" id="nombre" placeholder="Nombre completo" required />
+      <input type="email" id="correo" placeholder="Correo electrónico" required />
+      <input type="tel" id="telefono" placeholder="Teléfono" required />
 
-        <input type="text" id="servicio" placeholder="¿Qué trámite necesitas realizar?" required>
-        <input type="date" id="fecha" required>
-        <textarea id="mensaje" rows="4" placeholder="Cuéntanos más detalles sobre tu trámite (Opcional)"></textarea>
-        
-        <div style="margin: -5px 0 20px 0; text-align: left; font-size: 14px; color: #bbb; display: flex; align-items: center; gap: 10px;">
-          <input type="checkbox" id="politicaDatos" required style="width: auto; margin: 0;">
-          <label for="politicaDatos">He leído y acepto la <a href="datos-politica.html" style="color: #d4af37; text-decoration: underline;" target="_blank">Política de Tratamiento de Datos</a></label>
-        </div>
+      <select id="sede" required>
+        <option value="">Seleccione sede</option>
+        <option value="573017222991">Sede Alpujarra</option>
+        <option value="573009012017">Sede Centro Caracas</option>
+      </select>
 
-        <button type="submit">Agendar Vía WhatsApp</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- PREGUNTAS FRECUENTES -->
-  <section id="faq" class="reveal">
-    <h2>Preguntas Frecuentes</h2>
-    <div class="faq-item">
-      <h3>¿Dónde están ubicados? <span class="icon">+</span></h3>
-      <p>Contamos con dos sedes de atención estratégica en Medellín: Sede Alpujarra y Sede Centro Caracas. Ambas con atención inmediata.</p>
-    </div>
-    <div class="faq-item">
-      <h3>¿Los trámites tienen respaldo legal? <span class="icon">+</span></h3>
-      <p>Sí, absolutamente todos nuestros procesos y asesorías cuentan con el respaldo de un Contador Público y un Abogado titulado.</p>
-    </div>
-    <div class="faq-item">
-      <h3>¿Cómo agendo una asesoría presencial? <span class="icon">+</span></h3>
-      <p>Puedes llenar el formulario superior para enviar los detalles directamente a nuestro WhatsApp o presionar el botón flotante verde.</p>
-    </div>
-  </section>
-
-  <!-- CONTACTO Y SEDES -->
-  <section id="contacto" class="reveal">
-    <h2>Nuestras Sedes en Medellín</h2>
-    <div class="contacto-grid">
-      <div class="sede">
-        <h3><i class="fa-solid fa-location-dot"></i> Sede Alpujarra</h3>
-        <p>Atención directa por parte de Daniel.</p>
-        <p style="color: #d4af37; font-weight: bold; margin-top: 15px;"><i class="fa-solid fa-clock"></i> Lunes a Viernes</p>
-      </div>
-      <div class="sede">
-        <h3><i class="fa-solid fa-location-dot"></i> Sede Centro Caracas</h3>
-        <p>Atención directa por parte de Richard.</p>
-        <p style="color: #d4af37; font-weight: bold; margin-top: 15px;"><i class="fa-solid fa-clock"></i> Lunes a Viernes</p>
-      </div>
-    </div>
-  </section>
-
-  <footer style="text-align: center; padding: 40px 20px; background: #000; border-top: 1px solid #333; color: #888; font-size: 14px;">
-    <p>&copy; 2026 RD Gestiones Empresariales. Todos los derechos reservados.</p>
-  </footer>
-
-  <!-- Botón WhatsApp Flotante que activa el selector de sedes -->
-  <a href="javascript:void(0)" id="whatsappBtn" class="whatsapp-float" title="Contáctanos por WhatsApp" aria-label="Botón WhatsApp">
-    <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="#ffffff" width="28px" height="28px">
-      <path d="M20.52 3.48A11.77 11.77 0 0 0 12 0C5.37 0 .01 5.36.01 12a11.94 11.94 0 0 0 1.98 6.23L0 24l5.86-1.94A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12a11.77 11.77 0 0 0-3.48-8.52M12 21.48a9.5 9.5 0 0 1-5.37-1.63L6.3 19.6l-3.53.8.82-3.42-.23-.42a9.5 9.5 0 1 1 17.51-4.63 9.4 9.4 0 0 1-8.87 9.55"/>
-    </svg>
-  </a>
-
-  <!-- Modal selector de sede para WhatsApp -->
-  <div id="selectorSede" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-contenido">
-      <h3 id="modalTitle">¿Con cuál sede deseas comunicarte?</h3>
-      <button onclick="irWhatsApp('573017222991')">Sede Alpujarra</button>
-      <button onclick="irWhatsApp('573008012017')">Sede Centro Caracas</button>
-      <button onclick="cerrarModal()" style="background:#444; color:white; margin-top:15px;">Cancelar</button>
-    </div>
-  </div>
-
-  <button onclick="topFunction()" id="topBtn" title="Volver arriba">↑</button>
-
-  <!-- JAVASCRIPT LOGICA DE SEDES Y FORMULARIO -->
-  <script>
-    // Lógica para abrir el modal del botón flotante de WhatsApp
-    const whatsappBtn = document.getElementById("whatsappBtn");
-    const selectorSede = document.getElementById("selectorSede");
-
-    if (whatsappBtn) {
-      whatsappBtn.addEventListener("click", function() {
-        selectorSede.style.display = "flex";
-      });
-    }
-
-    function cerrarModal() {
-      selectorSede.style.display = "none";
-    }
-
-    function irWhatsApp(telefono) {
-      window.open(`https://wa.me{telefono}?text=Hola,%20necesito%20asesoría%20con%20un%20trámite%20empresarial`, '_blank');
-      cerrarModal();
-    }
-
-    // Lógica para enviar el formulario a la sede seleccionada vía WhatsApp
-    document.getElementById("formCita").addEventListener("submit", function(e) {
-      e.preventDefault();
+      <input type="text" id="servicio" placeholder="Servicio requerido" required />
+      <input type="date" id="fecha" required />
+      <textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
       
-      let nombre = document.getElementById("nombre").value.trim();
-      let correo = document.getElementById("correo").value.trim();
-      let telefono = document.getElementById("telefono").value.trim();
-      let sedeSelected = document.getElementById("sede").value;
-      let servicio = document.getElementById("servicio").value.trim();
-      let fecha = document.getElementById("fecha").value;
-      let mensaje = document.getElementById("mensaje").value.trim();
+      <div style="margin-top:10px; margin-bottom: 20px;">
+        <input type="checkbox" id="autorizacionForm" name="autorizacionForm" required style="accent-color:#d4af37;">
+        <label for="autorizacionForm" style="font-size:14px;">
+          He leído y acepto la 
+          <a href="politica-datos.html" target="_blank" style="color:#d4af37; text-decoration:none;">
+            Política de Tratamiento de Datos
+          </a>
+        </label>
+      </div>
+      <button type="submit">Agendar Cita</button>
+    </form>
+  </div>
+</section>
 
-      let numeroDestino = (sedeSelected === "Alpujarra") ? "573017222991" : "573008012017";
+<section id="testimonios">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="services">
+    <div class="card"><p>"Excelente atención y rapidez."</p><strong>- María G.</strong></div>
+    <div class="card"><p>"Proceso claro y sin complicaciones."</p><strong>- Carlos R.</strong></div>
+    <div class="card"><p>"Muy profesionales y confiables."</p><strong>- Laura P.</strong></div>
+  </div>
+</section>
 
-      let texto = `Hola, deseo agendar una cita:%0A` +
-                  `*Nombre:* ${encodeURIComponent(nombre)}%0A` +
-                  `*Correo:* ${encodeURIComponent(correo)}%0A` +
-                  `*Teléfono:* ${encodeURIComponent(telefono)}%0A` +
-                  `*Sede:* ${encodeURIComponent(sedeSelected)}%0A` +
-                  `*Trámite:* ${encodeURIComponent(servicio)}%0A` +
-                  `*Fecha:* ${encodeURIComponent(fecha)}%0A` +
-                  `*Detalles:* ${encodeURIComponent(mensaje)}`;
+<section id="contador" style="text-align:center; padding:50px;">
+  <h2 style="color:#d4af37;">Clientes Atendidos</h2>
+  <p id="count" style="font-size:3rem; color:#d4af37;">0</p>
+</section>
 
-      window.open(`https://wa.me{numeroDestino}?text=${texto}`, '_blank');
-    });
+<section id="faq">
+  <h2>Preguntas Frecuentes</h2>
+  <div class="faq-item">
+    <h3>¿Cuánto tarda una declaración de renta? <span>+</span></h3>
+    <p>Entre 1 y 3 días según el caso.</p>
+  </div>
+  <div class="faq-item">
+    <h3>¿Atienden virtual? <span>+</span></h3>
+    <p>Sí, atendemos presencial en Medellín y virtual a nivel nacional.</p>
+  </div>
+</section>
 
-    // Control de las preguntas frecuentes (FAQ)
-    document.querySelectorAll('.faq-item').forEach(item => {
-      item.addEventListener('click', () => {
-        item.classList.toggle('active');
-        let span = item.querySelector('.icon');
-        span.textContent = item.classList.contains('active') ? '-' : '+';
-      });
-    });
-// Mostrar botón de volver arriba al hacer scroll
-let mybutton = document.getElementById("topBtn");
+<div style="text-align:center; margin-top: 25px; color:#d4af37;">
+  <strong>Atención en Medellín y área metropolitana</strong><br/>
+  <span>Servicios presenciales y virtuales en toda Colombia</span>
+</div>
+ 
+<footer>
+  © 2026 RD Gestiones Empresariales. Todos los derechos reservados.
+  <br/>
+  <a href="politica-datos.html" style="color:#d4af37; text-decoration:none;">Política de Tratamiento de Datos</a>
+  <br/>
+  Atención profesional en Medellín – Trámites tributarios, legales y administrativos.
+</footer>
+
+<!-- Botón WhatsApp flotante -->
+<a href="javascript:void(0)" id="whatsappBtn" class="whatsapp-float" title="Contáctanos por WhatsApp" aria-label="Botón WhatsApp">
+  <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="#ffffff" width="28px" height="28px">
+    <path d="M20.52 3.48A11.77 11.77 0 0012 0C5.37 0 .01 5.36.01 12a11.94 11.94 0 001.98 6.23L0 24l5.86-1.94a11.94 11.94 0 006.17 1.72h.02c6.63 0 12-5.37 12-12a11.77 11.77 0 00-3.53-8.3zM12 21.48a9.5 9.5 0 01-4.86-1.41l-.35-.21-3.49 1.15 1.18-3.41-.23-.36a9.52 9.52 0 116.75 4.24zm5.2-7.4c-.27-.14-1.58-.77-1.82-.86s-.42-.14-.6.14-.69.86-.85 1.04-.31.21-.58.07a7.49 7.49 0 01-2.2-1.3c-.41-.4-.76-.9-1.07-1.45s-.44-1.28-.16-1.8c.14-.27.6-.42.89-.6.3-.18.4-.3.6-.5s.2-.35.3-.58a.6.6 0 00-.02-.57c-.07-.18-.6-1.44-.83-2-.22-.52-.44-.45-.6-.46h-.52a1.11 1.11 0 00-.82.4 3.5 3.5 0 00-1.3 3.06 5.6 5.6 0 001.27 2.9 12.88 12.88 0 005.1 5.1 6 6 0 002.7 1.3 3.48 3.48 0 003.05-1.3 3.45 3.45 0 00.44-3.07c-.05-.1-.2-.15-.44-.27z"/>
+  </svg>
+</a>
+
+<!-- Modal selector de sede -->
+<div id="selectorSede" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-contenido">
+    <h3 id="modalTitle">¿Con cuál sede deseas comunicarte?</h3>
+    <button onclick="irWhatsApp('57317222991')">Sede Alpujarra</button>
+    <button onclick="irWhatsApp('573009012017')">Sede Centro Caracas</button>
+    <button onclick="cerrarModal()">Cancelar</button>
+  </div>
+</div>
+
+<button onclick="topFunction()" id="topBtn" aria-label="Volver arriba">↑</button>
+
+<script>
+// ================= FORMULARIO CITA =================
+document.getElementById("formCita").addEventListener("submit", function(e) {
+  e.preventDefault();
+  let nombre = document.getElementById("nombre").value.trim();
+  let correo = document.getElementById("correo").value.trim();
+  let telefono = document.getElementById("telefono").value.trim();
+  let sede = document.getElementById("sede").value;
+  let servicio = document.getElementById("servicio").value.trim();
+  let fecha = document.getElementById("fecha").value;
+  let mensaje = document.getElementById("mensaje").value.trim();
+
+  if (!sede) {
+    alert("Por favor selecciona una sede.");
+    return;
+  }
+
+  let texto = `Hola, deseo agendar una cita:%0A
+Nombre: ${encodeURIComponent(nombre)}%0A
+Correo: ${encodeURIComponent(correo)}%0A
+Teléfono: ${encodeURIComponent(telefono)}%0A
+Servicio: ${encodeURIComponent(servicio)}%0A
+Fecha: ${encodeURIComponent(fecha)}%0A
+Mensaje: ${encodeURIComponent(mensaje)}`;
+
+  window.open(`https://wa.me{sede}?text=${texto}`, "_blank");
+  this.reset();
+});
+
+// ================= MODAL WHATSAPP =================
+const modal = document.getElementById("selectorSede");
+const whatsappBtn = document.getElementById("whatsappBtn");
+
+whatsappBtn.addEventListener("click", function() {
+  modal.style.display = "flex";
+});
+
+function cerrarModal() {
+  modal.style.display = "none";
+}
+
+function irWhatsApp(numero) {
+  let sedeNombre = numero === "57317222991" 
+      ? "Sede Alpujarra" 
+      : "Sede Centro Caracas";
+
+  let mensaje = `Hola, deseo recibir asesoría en ${sedeNombre}.`;
+  let mensajeCodificado = encodeURIComponent(mensaje);
+
+  let url = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+    ? `https://wa.me{numero}?text=${mensajeCodificado}`
+    : `https://whatsapp.com{numero}&text=${mensajeCodificado}`;
+
+  if (typeof gtag === "function") {
+    gtag('event', 'click_whatsapp', { sede: sedeNombre });
+  }
+
+  window.open(url, "_blank");
+  cerrarModal();
+}
+
+// ================= BOTÓN VOLVER ARRIBA =================
+const topBtn = document.getElementById("topBtn");
+
 window.onscroll = function() {
-if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-mybutton.style.display = "block";
-} else {
-mybutton.style.display = "none";
-}
+  if (topBtn) {
+    topBtn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) 
+        ? "block" : "none";
+  }
 };
-function topFunction() {
-document.body.scrollTop = 0;
-document.documentElement.scrollTop = 0;
 
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// ================= CONTADOR =================
+let count = 0;
+let target = 250;
+let speed = 20;
+let counter = document.getElementById('count');
+let interval = setInterval(()=>{
+  if(counter && count < target){ count++; counter.textContent = count; }
+  else{ clearInterval(interval); }
+}, speed);
+
+// ================= EFECTO REVEAL =================
+function revealOnScroll(){
+  document.querySelectorAll('.reveal').forEach(el=>{
+    let top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50){ el.classList.add('active'); }
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+</script>
+</body>
+</html>
