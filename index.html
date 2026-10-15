@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Trámites Empresariales en Medellín | RD Gestiones Empresariales</title>
   
-<meta name="description" content="Especialistas en trámites empresariales en Medellín. Registro Cámara de Comercio, RUT, DIAN, Industria y Comercio, asesoría tributaria y constitución de empresas. Atención en Alpujarra y Centro Caracas.">
+<meta name="description" content="Especialistas en trámites empresariales en Medellín. Registro Cámara de Comercio, RUT, DIAN, Industria y Comercio, asesoría tributaria y constitución de empresas.">
 
 <meta name="keywords" content="trámites Medellín, DIAN Medellín, declaración de renta Medellín, RUT Medellín, apostillas Medellín, traspasos Medellín" />
 <meta name="author" content="RD Gestiones Empresariales" />
@@ -22,121 +22,27 @@
 <meta name="ICBM" content="6.2442, -75.5812" />
 
 <link rel="icon" href="logo-rd.png" />
-<link href="https://googleapis.com" rel="stylesheet" />
 
 <!-- Font Awesome para íconos modernos -->
-<link rel="stylesheet" href="https://cloudflare.com" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cloudflare.com" />
 
 <style>
-  /* ===== FORMULARIO PREMIUM ===== */
-  #agendar {
-    background: linear-gradient(135deg, #111, #000);
-    border-top: 2px solid #d4af37;
-    border-bottom: 2px solid #d4af37;
-    padding: 80px 20px;
-  }
-
-  #agendar h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-    color: #d4af37;
-  }
-
-  .form-container {
-    max-width: 650px;
-    margin: auto;
-    background: #1a1a1a;
-    padding: 40px;
-    border-radius: 15px;
-    border: 1px solid #d4af37;
-    box-shadow: 0 0 30px rgba(212,175,55,0.2);
-    transition: 0.3s ease;
-  }
-
-  .form-container:hover {
-    box-shadow: 0 0 40px rgba(212,175,55,0.35);
-  }
-
-  .form-container input,
-  .form-container select,
-  .form-container textarea {
-    background: #111;
-    border: 1px solid #333;
-    color: white;
-    font-size: 15px;
-    transition: 0.3s;
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    box-sizing: border-box;
-  }
-
-  .form-container input:focus,
-  .form-container select:focus,
-  .form-container textarea:focus {
-    border: 1px solid #d4af37;
-    box-shadow: 0 0 8px rgba(212,175,55,0.4);
-    outline: none;
-  }
-
-  .form-container button {
-    width: 100%;
-    background: #d4af37;
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 14px;
-    border-radius: 8px;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-  }
-
-  .form-container button:hover {
-    background: white;
-    transform: translateY(-2px);
-  }
-
-  #faq { padding:50px 20px; max-width:900px; margin:auto; }
-  #faq h2 { text-align:center; color:#d4af37; margin-bottom:25px; font-size:2rem; }
-  .faq-item { background:#1a1a1a; border:1px solid #d4af37; border-radius:8px; margin-bottom:12px; padding:15px; cursor:pointer; transition:0.3s; }
-  .faq-item:hover { box-shadow:0 8px 20px rgba(212,175,55,0.3); }
-  .faq-item h3 { margin:0; color:#d4af37; display:flex; justify-content:space-between; align-items:center; font-size:1.1rem; }
-  .faq-item p { display:none; color:white; margin-top:10px; font-size:0.95rem; }
-  .faq-item.active p { display:block; }
-  .faq-item span { font-weight:bold; }
-
-  .flip-container { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; padding:50px 20px; }
-  .flip-card { background:#1a1a1a; border:1px solid #d4af37; width:250px; height:160px; perspective:1000px; border-radius:10px; }
-  .flip-card-inner { position:relative; width:100%; height:100%; text-align:center; transition: transform 0.6s; transform-style:preserve-3d; }
-  .flip-card:hover .flip-card-inner { transform:rotateY(180deg); }
-  .flip-card-front, .flip-card-back { position:absolute; width:100%; height:100%; backface-visibility:hidden; border-radius:10px; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:10px; }
-  .flip-card-front { background:#1a1a1a; color:#d4af37; }
-  .flip-card-back { background:#111; color:white; transform:rotateY(180deg); font-size:0.95rem; }
-  .flip-card-front h3, .flip-card-back p { margin:0; }
-
-  .reveal { opacity:0; transform:translateY(40px); transition:all 0.8s ease; padding:50px 20px; }
-  .reveal.active { opacity:1; transform:translateY(0); }
-
-  /* ===== ESTILOS DE CUERPO Y BASE ===== */
+  /* ===== ESTILOS DE CUERPO Y BASE (FONDO CORREGIDO) ===== */
   body {
     margin: 0;
     padding-top: 80px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
     scroll-behavior: smooth;
-    background: radial-gradient(circle at top, #1c1c1c 0%, #0a0a0a 100%);
+    background-color: #f8f9fa; /* Fondo gris claro limpio para que sea legible */
     font-weight: 400;
-    letter-spacing: 0.2px;
   }
 
-  h1, h2, h3 { color: #d4af37; }
+  h1, h2, h3 { color: #111111; text-align: center; }
+  .gold-text { color: #b9962e !important; }
 
   section {
-    padding: 80px 20px;
+    padding: 60px 20px;
     max-width: 1100px;
     margin: auto;
   }
@@ -147,9 +53,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.95);
+    background: #1a1a1a;
     padding: 15px 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
 
   .nav-container {
@@ -164,112 +71,108 @@
   .brand {
     color: #d4af37;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
+    letter-spacing: 1px;
   }
 
   .links a {
-    color: #d4af37;
+    color: #ffffff;
     margin-left: 20px;
     text-decoration: none;
     font-weight: 600;
-  }
-
-  .links a:hover { color: white; }
-
-  /* HEADER */
-  header {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 140px 20px 60px 20px;
-    background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(15,15,15,0.6) 100%);
-    box-sizing: border-box;
-  }
-
-  .logo {
-    width: 240px;
-    max-width: 85%;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 20px rgba(212,175,55,0.4));
-    transition: transform 0.5s ease;
-  }
-
-  .logo:hover { transform: scale(1.05); }
-
-  header p {
-    font-size: 19px;
-    line-height: 1.7;
-    color: #e0e0e0;
-    max-width: 750px;
-    margin: 15px auto;
-  }
-
-  .btn {
-    display: inline-block;
-    background-color: #d4af37;
-    color: black;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
     transition: 0.3s;
   }
 
-  .btn:hover { background-color: white; }
+  .links a:hover { color: #d4af37; }
 
-  /* TARJETAS DE SERVICIOS */
-  .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 25px;
+  /* SECCIÓN SERVICIOS */
+  #servicios h2 { margin-bottom: 10px; font-size: 2.2rem; }
+  #servicios h3 { margin-top: 30px; color: #b9962e; font-size: 1.5rem; text-align: left; border-left: 4px solid #d4af37; padding-left: 10px; }
+
+  .flip-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 20px 0; }
+  .flip-card { background: #ffffff; border: 1px solid #e0e0e0; width: 280px; height: 180px; perspective: 1000px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; }
+  .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+  .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
+  .flip-card-front { background: #ffffff; color: #1a1a1a; }
+  .flip-card-front i { color: #d4af37; font-size: 2.5rem; margin-bottom: 15px; }
+  .flip-card-front h3 { margin: 0; font-size: 1.2rem; }
+  .flip-card-back { background: #1a1a1a; color: white; transform: rotateY(180deg); font-size: 0.95rem; line-height: 1.5; }
+
+  /* ===== FORMULARIO PREMIUM ===== */
+  #agendar {
+    background: #111111;
+    color: white;
+    border-top: 3px solid #d4af37;
+    border-bottom: 3px solid #d4af37;
+    padding: 60px 20px;
   }
 
-  .card {
-    background-color: #1a1a1a;
-    padding: 25px;
-    border-radius: 10px;
-    border: 1px solid #d4af37;
-    transition: all 0.3s ease;
-  }
+  #agendar h2 { color: #d4af37; margin-bottom: 30px; font-size: 2rem; }
 
-  .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(212,175,55,0.3);
-  }
-
-  .card h3 {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  /* CONTACTO / SEDES */
-  .contacto-grid {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-
-  .sede {
-    background-color: #1a1a1a;
+  .form-container {
+    max-width: 600px;
+    margin: auto;
+    background: #1a1a1a;
     padding: 35px;
     border-radius: 12px;
-    border: 1px solid #d4af37;
-    width: 420px;
-    transition: 0.3s ease;
+    border: 1px solid #333;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
   }
 
-  .sede:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(212,175,55,0.25);
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    background: #222222;
+    border: 1px solid #444;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-sizing: border-box;
   }
+
+  .form-container input:focus,
+  .form-container select:focus,
+  .form-container textarea:focus {
+    border: 1px solid #d4af37;
+    outline: none;
+  }
+
+  .form-container button {
+    width: 100%;
+    background: #d4af37;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+
+  .form-container button:hover {
+    background: white;
+    transform: translateY(-2px);
+  }
+
+  /* TESTIMONIOS */
+  #testimonios { background: #ffffff; }
+  .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
+  .card { background-color: #f8f9fa; padding: 25px; border-radius: 10px; border: 1px solid #e0e0e0; text-align: center; }
+  .card p { italic; color: #555; }
+
+  /* FAQ */
+  #faq { padding: 60px 20px; max-width: 800px; margin: auto; }
+  .faq-item { background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 12px; padding: 18px; cursor: pointer; transition: 0.3s; }
+  .faq-item:hover { border-color: #d4af37; }
+  .faq-item h3 { margin: 0; color: #111; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; text-align: left; }
+  .faq-item p { display: none; color: #555; margin-top: 10px; font-size: 0.95rem; line-height: 1.6; }
+  .faq-item.active p { display: block; }
 
   /* BOTÓN VOLVER ARRIBA */
   #topBtn {
@@ -287,7 +190,7 @@
     z-index: 1500;
   }
 
-  /* WHATSAPP FLOTANTE PREMIUM OPTIMIZADO */
+  /* WHATSAPP FLOTANTE */
   .whatsapp-float {
     position: fixed;
     bottom: 25px;
@@ -302,64 +205,48 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    animation: pulse-green 2s infinite;
   }
 
-  .whatsapp-float:hover {
-    transform: scale(1.1);
-    background: #20ba5a;
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7);
-  }
-
-  @keyframes pulse-green {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-  }
-
-  /* MODAL DE SEDES DE WHATSAPP */
+  /* MODAL DE SEDES */
   .modal {
     display: none;
     position: fixed;
     z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.75);
-    backdrop-filter: blur(4px);
-    justify-content: center;
-    align-items: center;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+    justify-content: center; align-items: center;
   }
   .modal-contenido {
-    background-color: #1a1a1a;
-    padding: 30px 40px;
+    background-color: #ffffff;
+    padding: 30px;
     border-radius: 12px;
-    border: 1px solid #d4af37;
     text-align: center;
-    max-width: 320px;
+    max-width: 340px;
     width: 90%;
-    box-shadow: 0 0 40px rgba(212,175,55,0.4);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   }
-  .modal-contenido h3 { margin-bottom: 25px; font-weight: 700; font-size: 1.2rem; }
+  .modal-contenido h3 { margin-bottom: 20px; color: #111; }
   .modal-contenido button {
-    background: #d4af37;
+    background: #1a1a1a;
+    color: white;
     border: none;
-    padding: 12px 24px;
-    margin: 8px 5px;
+    padding: 12px 20px;
+    margin: 8px 0;
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease;
-    min-width: 140px;
+    width: 100%;
+    transition: 0.3s;
   }
-  .modal-contenido button:hover { background: #b9962e; }
+  .modal-contenido button.btn-sede { background: #d4af37; color: black; }
+  .modal-contenido button:hover { opacity: 0.9; }
+
+  footer { background: #1a1a1a; color: #aaa; text-align: center; padding: 40px 20px; font-size: 0.9rem; line-height: 1.8; }
 </style>
 </head>
 <body>
+
 <!-- NAVBAR -->
 <nav>
   <div class="nav-container">
@@ -368,272 +255,65 @@
       <a href="#servicios">Servicios</a>
       <a href="#agendar">Agendar Cita</a>
       <a href="#faq">Preguntas</a>
-      <a href="#contacto">Sedes</a>
     </div>
   </div>
 </nav>
 
-<section id="servicios" class="reveal">
+<!-- SECCIÓN SERVICIOS -->
+<section id="servicios">
+    <h2>Nuestros Servicios Integrales</h2>
     
-    <h3 style="margin-top: 30px;">🚀 Para Emprendedores</h3>
+    <h3>🚀 Para Emprendedores</h3>
     <div class="flip-container">
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <i class="fa-solid fa-building" style="font-size: 2rem; margin-bottom: 10px;"></i>
+            <i class="fa-solid fa-building"></i>
             <h3>Constitución</h3>
           </div>
           <div class="flip-card-back">
-            <p>Creación y formalización completa de tu empresa paso a paso.</p>
+            <p>Creación y formalización completa de tu empresa paso a paso sin complicaciones.</p>
           </div>
         </div>
       </div>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <i class="fa-solid fa-address-card" style="font-size: 2rem; margin-bottom: 10px;"></i>
+            <i class="fa-solid fa-address-card"></i>
             <h3>RUT y DIAN</h3>
           </div>
           <div class="flip-card-back">
-            <p>Inscripción, actualización del RUT y habilitación de firma electrónica.</p>
+            <p>Inscripción, actualización del RUT y habilitación de tu firma electrónica obligatoria.</p>
           </div>
         </div>
       </div>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <i class="fa-solid fa-map-location-dot" style="font-size: 2rem; margin-bottom: 10px;"></i>
+            <i class="fa-solid fa-map-location-dot"></i>
             <h3>Rues e Industria</h3>
           </div>
           <div class="flip-card-back">
-            <p>Registro mercantil inicial y trámites de Industria y Comercio municipal.</p>
+            <p>Registro mercantil inicial y gestión de trámites de Industria y Comercio municipal.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <h3 style="margin-top: 40px;">🏬 Para Empresas Activas</h3>
+    <h3>🏬 Para Empresas Activas</h3>
     <div class="flip-container">
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <i class="fa-solid fa-file-invoice-dollar" style="font-size: 2rem; margin-bottom: 10px;"></i>
+            <i class="fa-solid fa-file-invoice-dollar"></i>
             <h3>Trámites DIAN</h3>
           </div>
           <div class="flip-card-back">
-            <p>Declaraciones de renta, correcciones fiscales y estados de cuenta.</p>
+            <p>Declaraciones de renta, correcciones fiscales oportunas y estados de cuenta al día.</p>
           </div>
         </div>
       </div>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <i class="fa-solid fa-arrows-spin" style="font-size: 2rem; margin-bottom: 10px;"></i>
-            <h3>Cámara Comercio</h3>
-          </div>
-          <div class="flip-card-back">
-            <p>Renovaciones de matrícula mercantil, actas y modificaciones de estatutos.</p>
-          </div>
-        </div>
-      </div>
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <i class="fa-solid fa-certificate" style="font-size: 2rem; margin-bottom: 10px;"></i>
-            <h3>Especiales</h3>
-          </div>
-          <div class="flip-card-back">
-            <p>Apostillas de documentos, traspasos vehiculares y asesorías directas.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
- <section id="agendar">
-  <h2>Agendar Cita</h2>
-  <div class="form-container">
-    <form id="formCita">
-      <input type="text" id="nombre" placeholder="Nombre completo" required />
-      <input type="email" id="correo" placeholder="Correo electrónico" required />
-      <input type="tel" id="telefono" placeholder="Teléfono" required />
-
-      <select id="sede" required>
-        <option value="">Seleccione sede</option>
-        <option value="573017222991">Sede Alpujarra</option>
-        <option value="573009012017">Sede Centro Caracas</option>
-      </select>
-
-      <input type="text" id="servicio" placeholder="Servicio requerido" required />
-      <input type="date" id="fecha" required />
-      <textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
-      
-      <div style="margin-top:10px; margin-bottom: 20px;">
-        <input type="checkbox" id="autorizacionForm" name="autorizacionForm" required style="accent-color:#d4af37;">
-        <label for="autorizacionForm" style="font-size:14px;">
-          He leído y acepto la 
-          <a href="politica-datos.html" target="_blank" style="color:#d4af37; text-decoration:none;">
-            Política de Tratamiento de Datos
-          </a>
-        </label>
-      </div>
-      <button type="submit">Agendar Cita</button>
-    </form>
-  </div>
-</section>
-
-<section id="testimonios">
-  <h2>Lo que dicen nuestros clientes</h2>
-  <div class="services">
-    <div class="card"><p>"Excelente atención y rapidez."</p><strong>- María G.</strong></div>
-    <div class="card"><p>"Proceso claro y sin complicaciones."</p><strong>- Carlos R.</strong></div>
-    <div class="card"><p>"Muy profesionales y confiables."</p><strong>- Laura P.</strong></div>
-  </div>
-</section>
-
-<section id="contador" style="text-align:center; padding:50px;">
-  <h2 style="color:#d4af37;">Clientes Atendidos</h2>
-  <p id="count" style="font-size:3rem; color:#d4af37;">0</p>
-</section>
-
-<section id="faq">
-  <h2>Preguntas Frecuentes</h2>
-  <div class="faq-item">
-    <h3>¿Cuánto tarda una declaración de renta? <span>+</span></h3>
-    <p>Entre 1 y 3 días según el caso.</p>
-  </div>
-  <div class="faq-item">
-    <h3>¿Atienden virtual? <span>+</span></h3>
-    <p>Sí, atendemos presencial en Medellín y virtual a nivel nacional.</p>
-  </div>
-</section>
-
-<div style="text-align:center; margin-top: 25px; color:#d4af37;">
-  <strong>Atención en Medellín y área metropolitana</strong><br/>
-  <span>Servicios presenciales y virtuales en toda Colombia</span>
-</div>
- 
-<footer>
-  © 2026 RD Gestiones Empresariales. Todos los derechos reservados.
-  <br/>
-  <a href="politica-datos.html" style="color:#d4af37; text-decoration:none;">Política de Tratamiento de Datos</a>
-  <br/>
-  Atención profesional en Medellín – Trámites tributarios, legales y administrativos.
-</footer>
-
-<!-- Botón WhatsApp flotante -->
-<a href="javascript:void(0)" id="whatsappBtn" class="whatsapp-float" title="Contáctanos por WhatsApp" aria-label="Botón WhatsApp">
-  <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="#ffffff" width="28px" height="28px">
-    <path d="M20.52 3.48A11.77 11.77 0 0012 0C5.37 0 .01 5.36.01 12a11.94 11.94 0 001.98 6.23L0 24l5.86-1.94a11.94 11.94 0 006.17 1.72h.02c6.63 0 12-5.37 12-12a11.77 11.77 0 00-3.53-8.3zM12 21.48a9.5 9.5 0 01-4.86-1.41l-.35-.21-3.49 1.15 1.18-3.41-.23-.36a9.52 9.52 0 116.75 4.24zm5.2-7.4c-.27-.14-1.58-.77-1.82-.86s-.42-.14-.6.14-.69.86-.85 1.04-.31.21-.58.07a7.49 7.49 0 01-2.2-1.3c-.41-.4-.76-.9-1.07-1.45s-.44-1.28-.16-1.8c.14-.27.6-.42.89-.6.3-.18.4-.3.6-.5s.2-.35.3-.58a.6.6 0 00-.02-.57c-.07-.18-.6-1.44-.83-2-.22-.52-.44-.45-.6-.46h-.52a1.11 1.11 0 00-.82.4 3.5 3.5 0 00-1.3 3.06 5.6 5.6 0 001.27 2.9 12.88 12.88 0 005.1 5.1 6 6 0 002.7 1.3 3.48 3.48 0 003.05-1.3 3.45 3.45 0 00.44-3.07c-.05-.1-.2-.15-.44-.27z"/>
-  </svg>
-</a>
-
-<!-- Modal selector de sede -->
-<div id="selectorSede" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal-contenido">
-    <h3 id="modalTitle">¿Con cuál sede deseas comunicarte?</h3>
-    <button onclick="irWhatsApp('57317222991')">Sede Alpujarra</button>
-    <button onclick="irWhatsApp('573009012017')">Sede Centro Caracas</button>
-    <button onclick="cerrarModal()">Cancelar</button>
-  </div>
-</div>
-
-<button onclick="topFunction()" id="topBtn" aria-label="Volver arriba">↑</button>
-
-<script>
-// ================= FORMULARIO CITA =================
-document.getElementById("formCita").addEventListener("submit", function(e) {
-  e.preventDefault();
-  let nombre = document.getElementById("nombre").value.trim();
-  let correo = document.getElementById("correo").value.trim();
-  let telefono = document.getElementById("telefono").value.trim();
-  let sede = document.getElementById("sede").value;
-  let servicio = document.getElementById("servicio").value.trim();
-  let fecha = document.getElementById("fecha").value;
-  let mensaje = document.getElementById("mensaje").value.trim();
-
-  if (!sede) {
-    alert("Por favor selecciona una sede.");
-    return;
-  }
-
-  let texto = `Hola, deseo agendar una cita:%0A
-Nombre: ${encodeURIComponent(nombre)}%0A
-Correo: ${encodeURIComponent(correo)}%0A
-Teléfono: ${encodeURIComponent(telefono)}%0A
-Servicio: ${encodeURIComponent(servicio)}%0A
-Fecha: ${encodeURIComponent(fecha)}%0A
-Mensaje: ${encodeURIComponent(mensaje)}`;
-
-  window.open(`https://wa.me{sede}?text=${texto}`, "_blank");
-  this.reset();
-});
-
-// ================= MODAL WHATSAPP =================
-const modal = document.getElementById("selectorSede");
-const whatsappBtn = document.getElementById("whatsappBtn");
-
-whatsappBtn.addEventListener("click", function() {
-  modal.style.display = "flex";
-});
-
-function cerrarModal() {
-  modal.style.display = "none";
-}
-
-function irWhatsApp(numero) {
-  let sedeNombre = numero === "57317222991" 
-      ? "Sede Alpujarra" 
-      : "Sede Centro Caracas";
-
-  let mensaje = `Hola, deseo recibir asesoría en ${sedeNombre}.`;
-  let mensajeCodificado = encodeURIComponent(mensaje);
-
-  let url = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
-    ? `https://wa.me{numero}?text=${mensajeCodificado}`
-    : `https://whatsapp.com{numero}&text=${mensajeCodificado}`;
-
-  if (typeof gtag === "function") {
-    gtag('event', 'click_whatsapp', { sede: sedeNombre });
-  }
-
-  window.open(url, "_blank");
-  cerrarModal();
-}
-
-// ================= BOTÓN VOLVER ARRIBA =================
-const topBtn = document.getElementById("topBtn");
-
-window.onscroll = function() {
-  if (topBtn) {
-    topBtn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) 
-        ? "block" : "none";
-  }
-};
-
-function topFunction() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// ================= CONTADOR =================
-let count = 0;
-let target = 250;
-let speed = 20;
-let counter = document.getElementById('count');
-let interval = setInterval(()=>{
-  if(counter && count < target){ count++; counter.textContent = count; }
-  else{ clearInterval(interval); }
-}, speed);
-
-// ================= EFECTO REVEAL =================
-function revealOnScroll(){
-  document.querySelectorAll('.reveal').forEach(el=>{
-    let top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 50){ el.classList.add('active'); }
-  });
-}
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
-</script>
-</body>
-</html>
+            <i class="fa-solid fa-arrows-spin"></i>
